@@ -95,10 +95,9 @@ public class ClientController : MonoBehaviour {
 
         foreach (Requirenment req in client.requirenments)
         {
-            //Game.Instance.playerResourcesManager();//
-            if(!false){
+            int amount = Game.Instance.playerResourcesManager.getAmountByType(req.type);
+            if(amount < req.amount){
                 return false;
-
             }
         }
         return true;

@@ -13,9 +13,10 @@ public class ResourceManager : MonoBehaviour {
     Color labelColorMax;
 
     [SerializeField]
-    ResourceType resourceType;
+    public ResourceType resourceType;
 
-	int amount = 0;
+	
+    int amount = 0;
 	public int max = 10;
 
 	// Use this for initialization
@@ -25,6 +26,11 @@ public class ResourceManager : MonoBehaviour {
 
     public void upgradeMax(int nAmount){
         max = nAmount;
+    }
+
+    public int getAmount()
+    {
+        return amount;
     }
 	
 	// Update is called once per frame

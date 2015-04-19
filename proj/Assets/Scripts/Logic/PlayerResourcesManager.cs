@@ -45,4 +45,18 @@ public class PlayerResourcesManager : MonoBehaviour {
 
         currentMaxLabel.text = "MAX: " + currentMax.ToString();
     }
+
+    public int getAmountByType(ResourceType type){
+        var resources = GetComponentsInChildren<ResourceManager>();
+        
+        foreach (ResourceManager r in resources)
+        {
+            if(r.resourceType == type){
+                return r.getAmount();
+
+            }
+        }
+        return -1;
+
+    }
 }
