@@ -21,6 +21,10 @@ public class Client{
     public string item;
     public HeatType heatType;
     public List<Requirenment> requirenments;
+    public float patience = 5f; // strating minimum patience
+
+    // settings
+    float patiencePerResource = 0.2f;
 
 // todo heat type
     public Client(string _avatar, string _item, HeatType type = HeatType.Any)
@@ -34,6 +38,8 @@ public class Client{
 
     public void addRequirenment(Requirenment _req){
         requirenments.Add(_req);
+
+        patience += _req.amount * patiencePerResource;
     }
 }
 
