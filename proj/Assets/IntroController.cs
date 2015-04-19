@@ -8,7 +8,7 @@ public class IntroController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+        onShow();
 	}
 	
 	// Update is called once per frame
@@ -16,8 +16,14 @@ public class IntroController : MonoBehaviour {
 	
 	}
 
+    void onShow()
+    {
+        Time.timeScale = 0f;
+    }
+
     public void close (){
         tween.PlayForward();
         Destroy(gameObject, tween.duration);
+        Time.timeScale = 1f;
     }
 }

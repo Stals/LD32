@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
+//TODO list of lists, from which we generate random stuff set number of times
 public class ClientSpawner : MonoBehaviour {
 
     [SerializeField]
