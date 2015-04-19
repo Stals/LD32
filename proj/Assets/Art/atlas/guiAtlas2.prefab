@@ -42,8 +42,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: b4f534f31bb68ef4bab5e50440ceefae, type: 2}
   mSprites:
   - name: arrow
-    x: 142
-    y: 337
+    x: 166
+    y: 304
     width: 35
     height: 11
     borderLeft: 0
@@ -55,45 +55,6 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_blue_rectangle
-    x: 59
-    y: 480
-    width: 64
-    height: 32
-    borderLeft: 10
-    borderRight: 10
-    borderTop: 10
-    borderBottom: 10
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: element_blue_square
-    x: 109
-    y: 348
-    width: 32
-    height: 32
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: element_blue_square_glossy
-    x: 109
-    y: 315
-    width: 32
-    height: 32
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: element_green_rectangle
     x: 124
     y: 480
     width: 64
@@ -106,9 +67,48 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: element_blue_square
+    x: 133
+    y: 316
+    width: 32
+    height: 32
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: element_blue_square_glossy
+    x: 133
+    y: 283
+    width: 32
+    height: 32
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: element_green_rectangle
+    x: 124
+    y: 415
+    width: 64
+    height: 32
+    borderLeft: 10
+    borderRight: 10
+    borderTop: 10
+    borderBottom: 10
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: element_green_square
-    x: 109
-    y: 282
+    x: 133
+    y: 250
     width: 32
     height: 32
     borderLeft: 0
@@ -120,8 +120,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_green_square_glossy
-    x: 109
-    y: 249
+    x: 166
+    y: 316
     width: 32
     height: 32
     borderLeft: 0
@@ -146,8 +146,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_grey_square
-    x: 208
-    y: 381
+    x: 199
+    y: 316
     width: 32
     height: 32
     borderLeft: 0
@@ -159,8 +159,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_grey_square_glossy
-    x: 175
-    y: 381
+    x: 124
+    y: 382
     width: 32
     height: 32
     borderLeft: 0
@@ -172,8 +172,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_purple_cube_glossy
-    x: 142
-    y: 381
+    x: 157
+    y: 382
     width: 32
     height: 32
     borderLeft: 0
@@ -185,8 +185,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_purple_rectangle
-    x: 124
-    y: 447
+    x: 59
+    y: 415
     width: 64
     height: 32
     borderLeft: 10
@@ -198,8 +198,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_purple_square
-    x: 109
-    y: 381
+    x: 190
+    y: 382
     width: 32
     height: 32
     borderLeft: 0
@@ -211,8 +211,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_red_rectangle
-    x: 189
-    y: 447
+    x: 59
+    y: 382
     width: 64
     height: 32
     borderLeft: 10
@@ -224,8 +224,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_red_square
-    x: 208
-    y: 414
+    x: 223
+    y: 382
     width: 32
     height: 32
     borderLeft: 0
@@ -237,8 +237,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_red_square_glossy
-    x: 175
-    y: 414
+    x: 133
+    y: 349
     width: 32
     height: 32
     borderLeft: 0
@@ -250,8 +250,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_yellow_rectangle
-    x: 59
-    y: 447
+    x: 189
+    y: 415
     width: 64
     height: 32
     borderLeft: 10
@@ -263,8 +263,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_yellow_square
-    x: 142
-    y: 414
+    x: 166
+    y: 349
     width: 32
     height: 32
     borderLeft: 0
@@ -276,8 +276,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_yellow_square_glossy
-    x: 109
-    y: 414
+    x: 199
+    y: 349
     width: 32
     height: 32
     borderLeft: 0
@@ -290,7 +290,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: gem
     x: 83
-    y: 272
+    y: 244
     width: 22
     height: 29
     borderLeft: 0
@@ -302,8 +302,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 1
   - name: gold
-    x: 83
-    y: 247
+    x: 107
+    y: 289
     width: 24
     height: 24
     borderLeft: 0
@@ -314,9 +314,22 @@ MonoBehaviour:
     paddingRight: 4
     paddingTop: 4
     paddingBottom: 4
+  - name: hint
+    x: 59
+    y: 448
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: hotSeelct
-    x: 83
-    y: 379
+    x: 107
+    y: 314
     width: 25
     height: 67
     borderLeft: 0
@@ -328,8 +341,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: leather
-    x: 142
-    y: 349
+    x: 124
+    y: 448
     width: 32
     height: 31
     borderLeft: 0
@@ -341,8 +354,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 1
   - name: magic
-    x: 206
-    y: 351
+    x: 189
+    y: 450
     width: 28
     height: 29
     borderLeft: 0
@@ -355,7 +368,7 @@ MonoBehaviour:
     paddingBottom: 2
   - name: metal
     x: 83
-    y: 302
+    y: 274
     width: 23
     height: 29
     borderLeft: 0
@@ -367,8 +380,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 2
   - name: particleCartoonStar
-    x: 70
-    y: 246
+    x: 242
+    y: 469
     width: 10
     height: 10
     borderLeft: 0
@@ -380,8 +393,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: particleSmallStar
-    x: 59
-    y: 246
+    x: 242
+    y: 458
     width: 10
     height: 10
     borderLeft: 0
@@ -393,8 +406,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: particleStar
-    x: 235
-    y: 359
+    x: 107
+    y: 267
     width: 20
     height: 21
     borderLeft: 0
@@ -433,7 +446,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: thermometer_green
     x: 59
-    y: 366
+    y: 301
     width: 23
     height: 80
     borderLeft: 0
@@ -445,8 +458,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: thermometer_orange
-    x: 83
-    y: 332
+    x: 59
+    y: 254
     width: 23
     height: 46
     borderLeft: 0
@@ -471,8 +484,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: thermometer_yellow
-    x: 59
-    y: 288
+    x: 83
+    y: 304
     width: 23
     height: 77
     borderLeft: 0
@@ -484,8 +497,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: waterdrop
-    x: 142
-    y: 316
+    x: 107
+    y: 246
     width: 15
     height: 20
     borderLeft: 0
@@ -497,8 +510,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: wood
-    x: 175
-    y: 351
+    x: 157
+    y: 450
     width: 30
     height: 29
     borderLeft: 0
@@ -510,8 +523,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 2
   - name: wool
-    x: 59
-    y: 257
+    x: 218
+    y: 449
     width: 23
     height: 30
     borderLeft: 0

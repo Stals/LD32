@@ -23,7 +23,20 @@ public class IntroController : MonoBehaviour {
 
     public void close (){
         tween.PlayForward();
-        Destroy(gameObject, tween.duration);
+        //Destroy(gameObject, tween.duration);
+        Invoke("setInactive", tween.duration);
         Time.timeScale = 1f;
+    }
+
+    void setInactive()
+    {
+        gameObject.SetActive( false );
+        tween.ResetToBeginning();
+    }
+
+    public void open()
+    {
+        gameObject.SetActive(true);
+        onShow();
     }
 }
