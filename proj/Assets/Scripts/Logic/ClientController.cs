@@ -68,6 +68,9 @@ public class ClientController : MonoBehaviour {
     // Settings
     float patienceTimerDelay = 2f;
 
+    [SerializeField]
+    GameObject selectHeat;
+
 	// Use this for initialization
 	void Start () {
         /*Client client1 = new Client("knight", "sword");
@@ -171,9 +174,13 @@ public class ClientController : MonoBehaviour {
 
         Debug.Log(Game.Instance.forgeController.getCurrentHeat());
         //if ((client.heatType != HeatType.Any) &&
-           if( (Game.Instance.forgeController.getCurrentHeat() != client.heatType))
+           if ((Game.Instance.forgeController.getCurrentHeat() != client.heatType))
         {
+            selectHeat.SetActive(false);
             return false;
+        } else
+        {
+            selectHeat.SetActive(true);
         }
 
         foreach (Requirenment req in client.requirenments)
