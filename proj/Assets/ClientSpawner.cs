@@ -20,7 +20,7 @@ public class ClientSpawner : MonoBehaviour {
             clients.Add(client);
         }
         {
-            Client client = new Client("mage", "sword", HeatType.High);
+            Client client = new Client("mage", "sword", HeatType.Low);
             client.addRequirenment(new Requirenment(ResourceType.Wood, Random.Range(1, 4)));
             client.addRequirenment(new Requirenment(ResourceType.Magic, 3));
             clients.Add(client);

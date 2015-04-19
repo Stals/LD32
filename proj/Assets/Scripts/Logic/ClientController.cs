@@ -94,9 +94,29 @@ public class ClientController : MonoBehaviour {
         Sprite t2 = Resources.Load <Sprite> ("items/" + client.item);
         itemIcon.sprite2D = t2;
 
+        Sprite t3 = Resources.Load <Sprite> ("heat/" + getHeatName(client.heatType));
+        heatIcon.sprite2D = t3;
+
+
         Invoke("startPatienceReduction", patienceTimerDelay);
 
         // TODO heat
+    }
+
+    string getHeatName(HeatType type){
+        switch (type)
+        {
+            case HeatType.High:
+                return "high";
+            case HeatType.VeryHigh:
+                return "veryhight";
+            case HeatType.Medium:
+                return "medium";
+            case HeatType.Low:
+                return "low";
+        }
+        return "non";
+    
     }
 
     void startPatienceReduction()
