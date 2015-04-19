@@ -19,6 +19,10 @@ public class ResourceManager : MonoBehaviour {
 	void Start () {
 	
 	}
+
+    public void upgradeMax(int nAmount){
+        max += nAmount;
+    }
 	
 	// Update is called once per frame
 	void Update () {
