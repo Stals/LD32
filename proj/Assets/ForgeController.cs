@@ -16,6 +16,15 @@ public class ForgeController : MonoBehaviour {
 
     float forgeHeight;
 
+    [SerializeField]
+    GameObject LowHeatEnd;
+    [SerializeField]
+    GameObject MediumHeatEnd;
+    [SerializeField]
+    GameObject HighHeatEnd;
+    [SerializeField]
+    GameObject VeryHighHeatEnd;
+
 	// Use this for initialization
 	void Start () {
         forgeHeight = forgeSprite.height;
@@ -36,6 +45,10 @@ public class ForgeController : MonoBehaviour {
 
     public void onHeatClick(){
         currentHeat += heatPerClick;
+        if (currentHeat >= 1)
+        {
+            currentHeat = 1f;
+        }
     }
 
     public void onWaterClick(){
@@ -44,5 +57,28 @@ public class ForgeController : MonoBehaviour {
 
     float getArrowPosition(){
         return currentHeat * forgeHeight;
+    }
+
+    public HeatType getCurrentHeat()
+    {
+        float arrowPosition = getArrowPosition();
+
+        if (arrowPosition > VeryHighHeatEnd.transform.position.x)
+        {
+            return HeatType.TooMuch;
+        }
+        if (arrowPosition > HighHeatEnd.transform.position.x)
+        {
+            return HeatType.VeryHigh;
+        }
+        if (arrowPosition > MediumHeatEnd.transform.position.x)
+        {
+            return HeatType.Hight;
+        }
+        if (arrowPosition > LowHeatEnd.transform.position.x)
+        {
+            return HeatType.Medium;
+        }
+        return HeatType.Low;
     }
 }

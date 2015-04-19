@@ -26,6 +26,7 @@ public class Game  {
     SoundManager _soundManager;
     ErrorHandler _errorHandler;
     public PlayerResourcesManager playerResourcesManager;
+    public ForgeController forgeController;
 
 	Player player;
 
