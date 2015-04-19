@@ -26,7 +26,8 @@ public class ClientSpawner : MonoBehaviour {
             clients.Add(client);
         }
            
-        spawn();
+        InvokeRepeating("spawn", 2f, 5f);
+
 	
 	}
 	
@@ -45,7 +46,7 @@ public class ClientSpawner : MonoBehaviour {
                 GameObject go = NGUITools.AddChild(space.gameObject, clientPanelPrefab);
 
                 ClientController clientController = go.GetComponent<ClientController>();
-                clientController.create(getRandomClient());
+                clientController.create(getRandomClient(), space);
                 // TODO set position
                 go.transform.position = space.transform.position;
 

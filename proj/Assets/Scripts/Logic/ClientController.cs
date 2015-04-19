@@ -10,6 +10,11 @@ public enum HeatType{
     VeryHigh
 }
 
+/*
+
+есть минимальное время patience
+для начала игры
+ */
 public class Client{
 
     public string avatar;
@@ -46,6 +51,7 @@ public class ClientController : MonoBehaviour {
     public UIButton giveButton;
 
     Client client;
+    ClientSpace currentSpace;
 
 	// Use this for initialization
 	void Start () {
@@ -56,8 +62,9 @@ public class ClientController : MonoBehaviour {
         create(client1);*/
 	}
 	
-    public void create(Client _client){
+    public void create(Client _client, ClientSpace space){
         client = _client;
+        currentSpace = space;
 
         foreach (Requirenment req in client.requirenments)
         {
@@ -129,5 +136,6 @@ public class ClientController : MonoBehaviour {
     }
     void OnDestroy() {
         // set space to free !!!
+        currentSpace.empty = true;
     }
 }
