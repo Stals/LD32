@@ -155,7 +155,7 @@ Transform:
   m_Children:
   - {fileID: 635831802}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!82 &51797375
 AudioSource:
   m_ObjectHideFlags: 0
@@ -552,7 +552,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &125939381
 Transform:
   m_ObjectHideFlags: 0
@@ -808,7 +808,7 @@ Transform:
   m_Children:
   - {fileID: 137749376}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 3
+  m_RootOrder: 5
 --- !u!82 &138898052
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4423,7 +4423,7 @@ Transform:
   m_Children:
   - {fileID: 1016965029}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!1 &885869413
 GameObject:
   m_ObjectHideFlags: 0
@@ -6659,7 +6659,7 @@ Transform:
   m_Children:
   - {fileID: 1517958172}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 4
+  m_RootOrder: 0
 --- !u!82 &1315415535
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7976,12 +7976,12 @@ Transform:
   m_LocalPosition: {x: -.162287205, y: .54238981, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1315415534}
+  - {fileID: 1725031846}
   - {fileID: 860940697}
   - {fileID: 51797374}
   - {fileID: 2104691249}
   - {fileID: 138898051}
-  - {fileID: 1315415534}
-  - {fileID: 1725031846}
   m_Father: {fileID: 0}
   m_RootOrder: 9
 --- !u!1 &1552160214
@@ -9557,7 +9557,7 @@ Transform:
   m_Children:
   - {fileID: 738337470}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 5
+  m_RootOrder: 1
 --- !u!82 &1725031847
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13201,7 +13201,7 @@ Transform:
   m_Children:
   - {fileID: 700556292}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!82 &2104691250
 AudioSource:
   m_ObjectHideFlags: 0

@@ -106,12 +106,15 @@ public class Block : MonoBehaviour {
             iTween.Stop(gameObject);
             gameObject.RotateTo(new Vector3(0, 0, 0), 0.2f, 0);
             //transform.localEulerAngles = new Vector3(0, 0, 4.5f);
+			gameObject.ScaleTo(new Vector3(1f, 1f), 0.2f, 0);
+
         }
 
         if (_selected)
         {
             //audio.pitch = Random.Range(0.9f, 1.1f);
             audio.Play();
+			gameObject.ScaleTo(new Vector3(0.75f, 0.75f), 0.2f, 0);
         }
         
         selected = _selected;
