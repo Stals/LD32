@@ -147,9 +147,15 @@ public class Block : MonoBehaviour {
 
 
         // радиус окружности на которой находятся точки начала и коца
-        float r = (Vector3.Distance(guiObject.transform.position, uiTarget.transform.position) / 2);
+        float r = (Vector3.Distance(guiObject.transform.position, uiTarget.transform.position) / 3);
 
-        Vector3 bezierPoint = new Vector3(Random.Range(-r, r), Random.Range(-r, r), 0);      
+        Vector3 middlePoint = 0.5f * Vector3.Normalize(uiTarget.transform.position - guiObject.transform.position) + guiObject.transform.position;
+
+        Vector3 bezierPoint = middlePoint;
+        bezierPoint.x += Random.Range(-r, r);
+        bezierPoint.y += Random.Range(-r, r);
+
+        //Vector3 bezierPoint = //new Vector3( Random.Range(-r, r), Random.Range(-r, r), 0);      
 
         Vector3[] path = new Vector3[3] {guiObject.transform.position, bezierPoint,  uiTarget.transform.position};
 
