@@ -153,7 +153,7 @@ public class Block : MonoBehaviour {
 
         Vector3[] path = new Vector3[3] {guiObject.transform.position, bezierPoint,  uiTarget.transform.position};
 
-        float time = Random.Range(0.8f, 1.5f);
+        float time = Random.Range(0.6f, 0.8f);
         float delay = Random.Range(0.05f, 0.15f);
 
         guiObject.MoveTo(path, time, delay, EaseType.easeInSine);
