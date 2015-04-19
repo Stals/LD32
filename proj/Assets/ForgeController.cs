@@ -56,7 +56,7 @@ public class ForgeController : MonoBehaviour {
     }
 
     float getArrowPosition(){
-        return currentHeat * forgeHeight;
+        return currentHeat * forgeHeight + 45;
     }
 
     public HeatType getCurrentHeat()
@@ -73,7 +73,7 @@ public class ForgeController : MonoBehaviour {
         }
         if (arrowPosition > MediumHeatEnd.transform.position.x)
         {
-            return HeatType.Hight;
+            return HeatType.High;
         }
         if (arrowPosition > LowHeatEnd.transform.position.x)
         {

@@ -6,7 +6,7 @@ public enum HeatType{
     Any,
     Low, 
     Medium,
-    Hight,
+    High,
     VeryHigh,
     TooMuch
 }
