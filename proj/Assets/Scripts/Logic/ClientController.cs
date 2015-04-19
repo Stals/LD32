@@ -169,6 +169,13 @@ public class ClientController : MonoBehaviour {
     // TODO probably will need to redo
     bool isEnough(){
 
+        Debug.Log(Game.Instance.forgeController.getCurrentHeat());
+        //if ((client.heatType != HeatType.Any) &&
+           if( (Game.Instance.forgeController.getCurrentHeat() != client.heatType))
+        {
+            return false;
+        }
+
         foreach (Requirenment req in client.requirenments)
         {
             int amount = Game.Instance.playerResourcesManager.getAmountByType(req.type);

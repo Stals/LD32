@@ -25,6 +25,11 @@ public class ForgeController : MonoBehaviour {
     [SerializeField]
     GameObject VeryHighHeatEnd;
 
+    void Awake(){
+        Game.Instance.forgeController = this;
+
+    }
+
 	// Use this for initialization
 	void Start () {
         forgeHeight = forgeSprite.height;
@@ -63,19 +68,19 @@ public class ForgeController : MonoBehaviour {
     {
         float arrowPosition = getArrowPosition();
 
-        if (arrowPosition > VeryHighHeatEnd.transform.position.x)
+        if (arrowPosition > VeryHighHeatEnd.transform.localPosition.y)
         {
             return HeatType.TooMuch;
         }
-        if (arrowPosition > HighHeatEnd.transform.position.x)
+        if (arrowPosition > HighHeatEnd.transform.localPosition.y)
         {
             return HeatType.VeryHigh;
         }
-        if (arrowPosition > MediumHeatEnd.transform.position.x)
+        if (arrowPosition > MediumHeatEnd.transform.localPosition.y)
         {
             return HeatType.High;
         }
-        if (arrowPosition > LowHeatEnd.transform.position.x)
+        if (arrowPosition > LowHeatEnd.transform.localPosition.y)
         {
             return HeatType.Medium;
         }
