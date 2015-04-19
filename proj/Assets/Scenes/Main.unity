@@ -142,7 +142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &51797374
 Transform:
   m_ObjectHideFlags: 0
@@ -155,7 +155,7 @@ Transform:
   m_Children:
   - {fileID: 635831802}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!82 &51797375
 AudioSource:
   m_ObjectHideFlags: 0
@@ -352,6 +352,18 @@ Prefab:
       propertyPath: fakeBlock
       value: 
       objectReference: {fileID: 105484, guid: 7bfcc1c4ab4f6694a9bd7bf8301cddd8, type: 2}
+    - target: {fileID: 100000, guid: 25565912427b9452784d52efda4f5f33, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 25565912427b9452784d52efda4f5f33, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 25565912427b9452784d52efda4f5f33, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 25565912427b9452784d52efda4f5f33, type: 2}
   m_RootGameObject: {fileID: 51797373}
@@ -775,7 +787,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2a65e21672446aa4cb9529f01f6e8cf0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9e7ab096867804a969879652a4e5ccfa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &138898050
 GameObject:
@@ -808,7 +820,7 @@ Transform:
   m_Children:
   - {fileID: 137749376}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 4
+  m_RootOrder: 1
 --- !u!82 &138898052
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1012,6 +1024,14 @@ Prefab:
     - target: {fileID: 11400002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: aspectRatio
       value: 117
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
+      propertyPath: mSpriteName
+      value: leather
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
+      propertyPath: m_Name
+      value: LeatherSprite
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
@@ -2338,7 +2358,7 @@ GameObject:
   - 114: {fileID: 355818896}
   - 114: {fileID: 355818895}
   m_Layer: 5
-  m_Name: Sprite
+  m_Name: WoolSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2422,7 +2442,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11429880, guid: 7ac19e631d87666429cf891f4974afae, type: 2}
-  mSpriteName: element_red_square
+  mSpriteName: wool
   mFillCenter: 1
 --- !u!1 &359290905
 GameObject:
@@ -2884,7 +2904,7 @@ GameObject:
   - 114: {fileID: 486703068}
   - 114: {fileID: 486703069}
   m_Layer: 5
-  m_Name: Sprite
+  m_Name: CrystalSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2952,7 +2972,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11429880, guid: 7ac19e631d87666429cf891f4974afae, type: 2}
-  mSpriteName: element_blue_square
+  mSpriteName: gem
   mFillCenter: 1
 --- !u!114 &486703069
 MonoBehaviour:
@@ -3493,6 +3513,11 @@ Prefab:
       propertyPath: uiTarget
       value: 
       objectReference: {fileID: 641389315}
+    - target: {fileID: 21200000, guid: 90538355e50ee4725bf6d12688d5ce61, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 67d82b46e6dff4ddca120eb985a254de,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90538355e50ee4725bf6d12688d5ce61, type: 2}
   m_RootGameObject: {fileID: 2104691248}
@@ -3617,7 +3642,7 @@ Transform:
   m_Children:
   - {fileID: 355818894}
   m_Father: {fileID: 1704575830}
-  m_RootOrder: 0
+  m_RootOrder: 3
 --- !u!54 &600111363
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3818,7 +3843,7 @@ GameObject:
   - 114: {fileID: 641389318}
   - 114: {fileID: 641389317}
   m_Layer: 5
-  m_Name: Sprite
+  m_Name: WoodSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3902,7 +3927,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11429880, guid: 7ac19e631d87666429cf891f4974afae, type: 2}
-  mSpriteName: element_purple_square
+  mSpriteName: wood
   mFillCenter: 1
 --- !u!1 &644843452
 GameObject:
@@ -4033,7 +4058,7 @@ Transform:
   m_Children:
   - {fileID: 641389316}
   m_Father: {fileID: 1704575830}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!54 &649759029
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4283,7 +4308,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 792a644d7a0685e45acecdf7819bf149, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 67d82b46e6dff4ddca120eb985a254de, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &704741081
 GameObject:
@@ -4573,7 +4598,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 70dd2bd526fc4c74db06df55e54e1aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4ef08e7bdf22a424abd8f15f5b646140, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &754545702
 GameObject:
@@ -4993,6 +5018,11 @@ Prefab:
       propertyPath: uiTarget
       value: 
       objectReference: {fileID: 486703066}
+    - target: {fileID: 21200000, guid: 4917a4bf1dbdb44cf9130652917877d0, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9155f6c7797f149eeba48fe167dcd737,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4917a4bf1dbdb44cf9130652917877d0, type: 2}
   m_RootGameObject: {fileID: 860940692}
@@ -5132,7 +5162,7 @@ Transform:
   m_Children:
   - {fileID: 1016965029}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 1
+  m_RootOrder: 5
 --- !u!1 &885869413
 GameObject:
   m_ObjectHideFlags: 0
@@ -5212,7 +5242,7 @@ Transform:
   m_Children:
   - {fileID: 486703067}
   m_Father: {fileID: 1704575830}
-  m_RootOrder: 1
+  m_RootOrder: 4
 --- !u!54 &904244365
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6398,7 +6428,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 58a51bb30feb35d4aa45458d373b12e3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9155f6c7797f149eeba48fe167dcd737, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1017672122
 GameObject:
@@ -6576,11 +6606,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: mSpriteName
-      value: element_blue_square
+      value: gem
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: mWidth
       value: 4680
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
+      propertyPath: m_Name
+      value: CrystalSprite
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
@@ -6829,7 +6863,7 @@ GameObject:
   - 114: {fileID: 1043116348}
   - 114: {fileID: 1043116347}
   m_Layer: 5
-  m_Name: Sprite
+  m_Name: MetalSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6913,7 +6947,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11429880, guid: 7ac19e631d87666429cf891f4974afae, type: 2}
-  mSpriteName: element_grey_square
+  mSpriteName: metal
   mFillCenter: 1
 --- !u!1001 &1055901045
 Prefab:
@@ -7283,6 +7317,11 @@ Prefab:
       propertyPath: uiTarget
       value: 
       objectReference: {fileID: 2110001403}
+    - target: {fileID: 21200000, guid: 2124d42f729614865b6c2c8b42eb4608, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ef08e7bdf22a424abd8f15f5b646140,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2124d42f729614865b6c2c8b42eb4608, type: 2}
   m_RootGameObject: {fileID: 1725031845}
@@ -7603,7 +7642,7 @@ Transform:
   m_Children:
   - {fileID: 1043116346}
   m_Father: {fileID: 1704575830}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!1 &1188464252
 GameObject:
   m_ObjectHideFlags: 0
@@ -7962,7 +8001,7 @@ Transform:
   m_Children:
   - {fileID: 1517958172}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 5
+  m_RootOrder: 2
 --- !u!82 &1315415535
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8127,11 +8166,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: mSpriteName
-      value: element_grey_square
+      value: metal
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: mWidth
       value: 4680
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
+      propertyPath: m_Name
+      value: MetalSprite
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
@@ -8494,6 +8537,11 @@ Prefab:
       propertyPath: uiTarget
       value: 
       objectReference: {fileID: 355818893}
+    - target: {fileID: 21200000, guid: e07ddedeaf0b64761889625afe171179, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bf2fce177630b4ea7854a17c25b56dcd,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e07ddedeaf0b64761889625afe171179, type: 2}
   m_RootGameObject: {fileID: 1315415533}
@@ -8610,11 +8658,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: mSpriteName
-      value: element_red_square
+      value: wool
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: mWidth
       value: 4680
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
+      propertyPath: m_Name
+      value: WoolSprite
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
@@ -9156,6 +9208,11 @@ Prefab:
       propertyPath: uiTarget
       value: 
       objectReference: {fileID: 1043116345}
+    - target: {fileID: 21200000, guid: 40e79f1c006bf4ec9b4cac5ea8df5d5b, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9e7ab096867804a969879652a4e5ccfa,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40e79f1c006bf4ec9b4cac5ea8df5d5b, type: 2}
   m_RootGameObject: {fileID: 138898050}
@@ -9613,7 +9670,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e4b1127f3296fb4e99e72b245bbe570, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf2fce177630b4ea7854a17c25b56dcd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1534800904
 GameObject:
@@ -9640,12 +9697,12 @@ Transform:
   m_LocalPosition: {x: -.162287205, y: .54238981, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1725031846}
-  - {fileID: 860940697}
-  - {fileID: 51797374}
   - {fileID: 2104691249}
   - {fileID: 138898051}
   - {fileID: 1315415534}
+  - {fileID: 1725031846}
+  - {fileID: 51797374}
+  - {fileID: 860940697}
   m_Father: {fileID: 0}
   m_RootOrder: 9
 --- !u!1 &1552160214
@@ -11169,11 +11226,11 @@ Transform:
   m_LocalPosition: {x: -374.653015, y: 81.5106125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 600111362}
-  - {fileID: 904244364}
   - {fileID: 1842077424}
   - {fileID: 1184015570}
   - {fileID: 649759028}
+  - {fileID: 600111362}
+  - {fileID: 904244364}
   m_Father: {fileID: 1596178738}
   m_RootOrder: 11
 --- !u!114 &1704575831
@@ -11384,7 +11441,7 @@ Transform:
   m_Children:
   - {fileID: 738337470}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 0
+  m_RootOrder: 3
 --- !u!82 &1725031847
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12627,7 +12684,7 @@ Transform:
   m_Children:
   - {fileID: 2110001404}
   m_Father: {fileID: 1704575830}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!54 &1842077425
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13664,11 +13721,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: mSpriteName
-      value: element_purple_square
+      value: wood
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: mWidth
       value: 4680
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
+      propertyPath: m_Name
+      value: WoodSprite
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
@@ -15308,7 +15369,7 @@ Transform:
   m_Children:
   - {fileID: 700556292}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 3
+  m_RootOrder: 0
 --- !u!82 &2104691250
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15423,7 +15484,7 @@ GameObject:
   - 114: {fileID: 2110001406}
   - 114: {fileID: 2110001405}
   m_Layer: 5
-  m_Name: Sprite
+  m_Name: LeatherSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15507,7 +15568,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11429880, guid: 7ac19e631d87666429cf891f4974afae, type: 2}
-  mSpriteName: element_green_square
+  mSpriteName: leather
   mFillCenter: 1
 --- !u!1 &2130704577
 GameObject:
