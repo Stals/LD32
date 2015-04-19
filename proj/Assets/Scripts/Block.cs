@@ -164,7 +164,7 @@ public class Block : MonoBehaviour {
         guiObject.GetComponent<UISprite>().spriteName = GetComponentInChildren<SpriteRenderer>().sprite.name; ;
         guiObject.GetComponent<UISprite>().MarkAsChanged();
 
-        uiTarget.GetComponent<ProgressController>().Invoke("addBlock", time + delay);
+        uiTarget.GetComponent<ResourceManager>().Invoke("addBlock", time + delay);
 
 		Destroy (this.gameObject);
         //TODO finish sound
