@@ -3801,7 +3801,7 @@ Transform:
   m_Children:
   - {fileID: 355818894}
   m_Father: {fileID: 1704575830}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!54 &600111363
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4297,7 +4297,7 @@ Transform:
   m_Children:
   - {fileID: 641389316}
   m_Father: {fileID: 1704575830}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!54 &649759029
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5762,7 +5762,7 @@ Transform:
   m_Children:
   - {fileID: 486703067}
   m_Father: {fileID: 1704575830}
-  m_RootOrder: 0
+  m_RootOrder: 4
 --- !u!54 &904244365
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8195,8 +8195,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHeat: 0
-  heatPerSecond: .100000001
-  heatPerClick: .0500000007
+  heatPerSecond: .0500000007
+  heatPerClick: .0599999987
   arrow: {fileID: 1758067183}
   forgeSprite: {fileID: 855340660}
 --- !u!1001 &1131187225
@@ -8523,7 +8523,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: 933a8e430e32d4190849e71cfd834c49, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 100020, guid: 933a8e430e32d4190849e71cfd834c49, type: 2}
       propertyPath: m_IsActive
@@ -8623,7 +8623,7 @@ Transform:
   m_Children:
   - {fileID: 1043116346}
   m_Father: {fileID: 1704575830}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1 &1188464252
 GameObject:
   m_ObjectHideFlags: 0
@@ -8847,7 +8847,7 @@ MonoBehaviour:
   thumb: {fileID: 0}
   mBG: {fileID: 1224017949}
   mFG: {fileID: 636045202}
-  mValue: .805000007
+  mValue: 1
   mFill: 0
   numberOfSteps: 0
   onChange: []
@@ -12649,11 +12649,11 @@ Transform:
   m_LocalPosition: {x: -374.22522, y: -158.779053, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 904244364}
   - {fileID: 1842077424}
   - {fileID: 1184015570}
   - {fileID: 649759028}
   - {fileID: 600111362}
+  - {fileID: 904244364}
   m_Father: {fileID: 461964084}
   m_RootOrder: 0
 --- !u!114 &1704575831
@@ -14266,7 +14266,7 @@ Transform:
   m_Children:
   - {fileID: 2110001404}
   m_Father: {fileID: 1704575830}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!54 &1842077425
 Rigidbody:
   m_ObjectHideFlags: 0

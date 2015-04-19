@@ -62,6 +62,10 @@ public class ClientController : MonoBehaviour {
     float patienceLeft;
 
     bool isActivated = true;
+    bool patienceInProgress = false;
+
+    // Settings
+    float patienceTimerDelay = 2f;
 
 	// Use this for initialization
 	void Start () {
@@ -89,7 +93,14 @@ public class ClientController : MonoBehaviour {
         Sprite t2 = Resources.Load <Sprite> ("items/" + client.item);
         itemIcon.sprite2D = t2;
 
+        Invoke("startPatienceReduction", patienceTimerDelay);
+
         // TODO heat
+    }
+
+    void startPatienceReduction()
+    {
+        patienceInProgress = true;
     }
 
 	// Update is called once per frame
@@ -103,16 +114,27 @@ public class ClientController : MonoBehaviour {
 
         giveButton.isEnabled = isEnough();
 
-        // update patience
-        patienceLeft -= Time.deltaTime;
-        patienceBar.value = (patienceLeft / client.patience);
 
-        if (patienceLeft <= 0)
-        {
-            // once
-            removeSelf();
-        }
+        updatePatience();
+
 	}
+
+    void updatePatience()
+    {
+        if (patienceInProgress)
+        {
+            // update patience
+            patienceLeft -= Time.deltaTime;
+            patienceBar.value = (patienceLeft / client.patience);
+            
+            
+            if (patienceLeft <= 0)
+            {
+                // once
+                removeSelf();
+            }
+        }
+    }
 
     void addRequirenment(Requirenment r){
         GameObject req = NGUITools.AddChild(requirenmentsGrid.gameObject, requirenmentPrefab);
@@ -148,6 +170,8 @@ public class ClientController : MonoBehaviour {
     void removeSelf()
     {
         isActivated = false;
+        patienceInProgress = false;
+         
 
         // TODO animation + destory after time
         float animationTime = 1f;
