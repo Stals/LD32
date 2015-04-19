@@ -49,14 +49,14 @@ public class ClientController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Client client1 = new Client("knight", "sword");
-        //client1.addRequirenment(new Requirenment(ResourceType.Wood, 2));
-        //client1.addRequirenment(new Requirenment(ResourceType.Metal, 3));
+        /*Client client1 = new Client("knight", "sword");
+        client1.addRequirenment(new Requirenment(ResourceType.Wood, 2));
+        client1.addRequirenment(new Requirenment(ResourceType.Metal, 3));
 
-        create(client1);
+        create(client1);*/
 	}
 	
-    void create(Client _client){
+    public void create(Client _client){
         client = _client;
 
         foreach (Requirenment req in client.requirenments)
@@ -126,5 +126,8 @@ public class ClientController : MonoBehaviour {
 
         //NGUITools.Destroy(this.gameObject, );
 
+    }
+    void OnDestroy() {
+        // set space to free !!!
     }
 }
