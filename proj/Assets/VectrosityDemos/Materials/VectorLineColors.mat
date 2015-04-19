@@ -43,16 +43,16 @@ Material:
         second: {r: 1, g: .999984741, b: .999588013, a: 1}
       data:
         first:
-          name: _Emission
-        second: {r: 1, g: .12899977, b: .108430609, a: 1}
-      data:
-        first:
           name: _SpecColor
         second: {r: .5, g: .5, b: .5, a: 0}
       data:
         first:
+          name: _Emission
+        second: {r: 1, g: .12899977, b: .108430609, a: 1}
+      data:
+        first:
           name: _TintColor
-        second: {r: .490196079, g: .490196079, b: .490196079, a: .196078435}
+        second: {r: .490196079, g: .490196079, b: .490196079, a: .333333343}
       data:
         first:
           name: _EmisColor

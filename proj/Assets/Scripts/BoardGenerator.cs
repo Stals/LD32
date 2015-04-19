@@ -25,7 +25,7 @@ public class BoardGenerator {
 		return board;
 	}
 
-	int getRandomObject()
+	public int getRandomObject()
 	{
 		// todo add weighted random later
 		return Random.Range (0, objectTypes);

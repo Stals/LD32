@@ -3,6 +3,12 @@ using System.Collections;
 
 public class Block : MonoBehaviour {
 
+	[SerializeField]
+	GameObject uiTarget;
+
+	[SerializeField]
+	GameObject fakeBlock;
+
 	bool isTriggered = false;
 
 	public int x;
@@ -12,17 +18,17 @@ public class Block : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        InvokeRepeating("updateRotation", 0.5f, 0.5f);
+        //InvokeRepeating("updateRotation", 0.5f, 0.5f);
 	}
 
-    void updateRotation()
+    public void updateRotation()
     {
         if (selected)
         {
-            gameObject.RotateBy(new Vector3(0, 0, 1f), 0.3f, 0, EaseType.easeInOutSine, true);
+            gameObject.RotateBy(new Vector3(0, 0, 1f), 0.48f, 0, EaseType.easeInOutSine, true);
         } else
         {
-            gameObject.RotateBy(new Vector3(0, 0, 0.025f), 0.5f, 0, EaseType.easeInOutSine, LoopType.pingPong, true);
+            //gameObject.RotateBy(new Vector3(0, 0, 0.025f), 0.5f, 0, EaseType.easeInOutSine, LoopType.pingPong, true);
         }
     }
 
@@ -78,11 +84,16 @@ public class Block : MonoBehaviour {
                                               "time", 0.3f, "delay", 0f, "islocal", true, 
                                               "easetype", "easeInOutSine"));*/
 
-        iTween.MoveTo(gameObject, iTween.Hash("position", Game.Instance.getBoardManager ().getPosition (x, y),
-                                              "time", 0.3f, "delay", 0f, "islocal", true, 
-                                              "easetype", "easeInQuad"));
+		Vector3 currentPosition = transform.position;
+		Vector3 targetPosition = Game.Instance.getBoardManager ().getPosition (x, y);
 
-	}
+		float distance = Vector3.Distance(currentPosition, targetPosition);
+
+        iTween.MoveTo(gameObject, iTween.Hash("position", Game.Instance.getBoardManager ().getPosition (x, y),
+		                                      "time", distance * 0.5f, "delay", 0f, "islocal", true, 
+			                                      "easetype", "easeInQuad"));
+        
+    }
 
     public string getImageName()
     {
@@ -110,4 +121,49 @@ public class Block : MonoBehaviour {
     {
         return selected;
     }
+
+	public void destroyBlock()
+	{
+        Camera gameCamera = NGUITools.FindCameraForLayer(gameObject.layer);
+        Camera uiCamera = UICamera.mainCamera;
+
+
+        GameObject guiObject = NGUITools.AddChild(uiCamera.transform.parent.gameObject, fakeBlock);
+        
+
+
+       /* UILabel label = guiObject.GetComponentInChildren<UILabel>();
+        label.text = amout.ToString();*/
+
+        /* MOVE TO CORRECT POSITION*/
+        // Get screen location of node
+        Vector2 screenPos = Camera.main.WorldToScreenPoint(transform.position);
+
+        // Move to node
+        guiObject.transform.position = uiCamera.ScreenToWorldPoint(screenPos);
+
+
+        // радиус окружности на которой находятся точки начала и коца
+        float r = (Vector3.Distance(guiObject.transform.position, uiTarget.transform.position) / 2);
+
+        Vector3 bezierPoint = new Vector3(Random.Range(-r, r), Random.Range(-r, r), 0);      
+
+        Vector3[] path = new Vector3[3] {guiObject.transform.position, bezierPoint,  uiTarget.transform.position};
+
+        float time = Random.Range(0.8f, 1.5f);
+        float delay = Random.Range(0.05f, 0.15f);
+
+        guiObject.MoveTo(path, time, delay, EaseType.easeInSine);
+        guiObject.RotateBy(new Vector3(0, 0, 1f), 0.5f, 0, EaseType.easeInOutSine, LoopType.loop);
+
+        guiObject.GetComponent<FakeBlockController>().Invoke("OnFinishAnimation", time + delay);
+
+        guiObject.GetComponent<UISprite>().spriteName = GetComponentInChildren<SpriteRenderer>().sprite.name; ;
+        guiObject.GetComponent<UISprite>().MarkAsChanged();
+
+        uiTarget.GetComponent<ProgressController>().Invoke("addBlock", time + delay);
+
+		Destroy (this.gameObject);
+        //TODO finish sound
+	}
 }

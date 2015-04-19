@@ -29,13 +29,35 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     UILabel linesLeftLabel;
 
-    [SerializeField]
-    GameJoltAPIManager GJManager;
-
     Player player;
 
     int currentBet = 0;
     int linesLeft = 9;
+
+
+
+    public int hoursLeft;
+    [SerializeField]
+    UILabel leftHoursLabel;
+
+    int currentWeek = 1;
+
+    [SerializeField]
+    UILabel weekCounterLabel;
+
+    [SerializeField]
+    ProgressController healthProgress;
+
+    [SerializeField]
+    GameObject progressGrid;
+
+
+    int currentMoney = 50;
+
+    float displayMoney = 0;
+    [SerializeField]
+    UILabel uiMoneyLabel;
+
 
 	// Use this for initialization
 	void Start () {
@@ -43,19 +65,55 @@ public class GameManager : MonoBehaviour {
         player = Game.Instance.getPlayer();
 
         currentPrizeLabel.text = "";
+
+        hoursLeft = getHoursLeftMax();
+
+        uiMoneyLabel.text = currentMoney.ToString();
+        displayMoney = currentMoney;
 	}
+
+    int getHoursLeftMax()
+    {
+        ProgressController[] progs = progressGrid.GetComponentsInChildren<ProgressController>();
+
+        int sum = 0;
+
+        for (int i = 0; i < progs.Length; ++i) {
+            ProgressController prog = progs[i];
+            sum += prog.getEffectHours();
+        }
+
+        return 40 + sum;
+    }
+
+    int getMoneyPerWeek()
+    {
+        ProgressController[] progs = progressGrid.GetComponentsInChildren<ProgressController>();
+
+        int sum = 0;
+
+        for (int i = 0; i < progs.Length; ++i)
+        {
+            ProgressController prog = progs[i];
+            sum += prog.getEffectMoney();
+        }
+
+        return sum; 
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        moneyLabel.text = string.Format("Money: {0}", player.getMoney());
 
-        currentLinesLabel.text = getCurrentLines().ToString();
-        currentBetLabel.text = getCurrentBet().ToString();
-        totalBetLabel.text = getTotalBet().ToString();
-        linesLeftLabel.text = linesLeft.ToString();
 
-        float baseMoney = countMultipier( Game.Instance.getBoardManager().getSelectedCount() );
-        currentPrizeLabel.text = string.Format("{0} x {1} = {2}", currentBet, baseMoney, baseMoney * currentBet);
+
+        leftHoursLabel.text = (hoursLeft - Game.Instance.getBoardManager().getSelectedCount()).ToString();
+        weekCounterLabel.text = currentWeek.ToString();
+
+
+        displayMoney = Mathf.Lerp(displayMoney, currentMoney, Time.deltaTime * 5f);
+
+        uiMoneyLabel.text = displayMoney.ToString("F2");
+        ///
 	}
 
     public int getCurrentBet()
@@ -126,11 +184,25 @@ public class GameManager : MonoBehaviour {
 
     public void onLineRemove(int blockCount)
     {
-        --linesLeft;
-        Game.Instance.getPlayer().addMoney(countMultipier(blockCount) * currentBet);
-        Game.Instance.soundManager().playRemoveLine();
+        hoursLeft -= blockCount;
 
-        GJManager.GenerateHighscores(Game.Instance.getPlayer().getMoney());
+        if (hoursLeft <= 0) {
+            currentWeek += 1;
+            hoursLeft = getHoursLeftMax();
+
+            healthProgress.currentValue -= 5;
+            if (healthProgress.currentValue < 0) {
+                healthProgress.currentValue = 0;
+            }
+            //currentMoney -= 50;
+            currentMoney += getMoneyPerWeek();
+
+            // TODO add week
+            // - hp
+            // give money
+        }
+
+        //GJManager.GenerateHighscores(Game.Instance.getPlayer().getMoney());
     }
 
     public float countMultipier(int blockCount)
@@ -144,6 +216,6 @@ public class GameManager : MonoBehaviour {
 
     public bool canRemoveLine()
     {
-        return linesLeft > 0;
+		return true;
     }
 }

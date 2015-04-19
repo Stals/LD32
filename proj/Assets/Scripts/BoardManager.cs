@@ -5,8 +5,8 @@ using Vectrosity;
 
 public class BoardManager : MonoBehaviour {
 
-	int width = 8;
-	int height = 6;
+	int width = 9;
+	int height = 7;
 
 	BoardGenerator generator;
 	
@@ -57,7 +57,10 @@ public class BoardManager : MonoBehaviour {
         createBoard ();
 		positionBoard ();
 
-        gameObject.RotateBy(new Vector3(0, 0, -0.005f), 0.5f, 0, EaseType.easeInOutSine, LoopType.pingPong);
+        //gameObject.RotateBy(new Vector3(0, 0, -0.005f), 0.5f, 0, EaseType.easeInOutSine, LoopType.pingPong);
+
+		//InvokeRepeating("fillEmpty", 0.25f, 0.5f);
+		InvokeRepeating("updateRotation", 0.5f, 0.5f);
 	}
 
 
@@ -72,8 +75,57 @@ public class BoardManager : MonoBehaviour {
 		transform.position = new Vector3( -boardWidth / 2f, -boardHeight / 2f, transform.position.z);*/
 	}
 
-	// Update is called once per frame
-	void Update () {
+	void fillEmpty()
+	{
+		for (int x = 0; x < width; ++x) {
+			for(int y = 0; y < height; ++y){
+				BoardObject boardObject = currentBoard.at(x, y);
+
+				if(boardObject.block == null){
+
+					int id = generator.getRandomObject();
+					Block block = createBlockAt(x, y, id);
+					boardObject.setBlock(block);
+					block.updatePosition();
+				}
+            }
+        }
+    }
+
+	void updateRotation()
+	{
+		for (int x = 0; x < width; ++x) {
+						for (int y = 0; y < height; ++y) {
+								BoardObject boardObject = currentBoard.at (x, y);
+				
+								if (boardObject.block != null) {
+					boardObject.block.updateRotation();
+								}
+						}
+				}
+            }
+
+	Block createBlockAt(int x, int y, int id){
+		GameObject obj = (GameObject)Instantiate(objectPrefabs[id], Vector3.zero, Quaternion.identity);
+		obj.transform.parent = transform;
+		Vector3 startPos = getPosition(x, y);
+		float spread = 3;
+
+		startPos.y += (((y + 1) * objectHeight * (spread + 1)) + Random.Range(2, spread));
+		obj.transform.localPosition = startPos;
+		
+		// делать немного выше и вызывать update position
+		
+		// obj.transform.localEulerAngles = new Vector3(0, 0, -4.5f);
+		
+		Block block = obj.GetComponent<Block>();
+		block.setIDs(x, y);
+		return block;
+    }
+    
+    
+    // Update is called once per frame
+    void Update () {
         updateSelectedLine();
 
 		// mouse just released
@@ -101,6 +153,7 @@ public class BoardManager : MonoBehaviour {
                 createNewBoard = false;
             }
         }
+		fillEmpty ();
 	}
 
     void endSelection()
@@ -160,7 +213,8 @@ public class BoardManager : MonoBehaviour {
 		// without a gameobject
 		// this movement should be put into Board class probably
 		currentBoard.removeAt (block.x, block.y);
-		block.gameObject.SetActive(false);
+
+        block.destroyBlock();
 	}
 
     public void clearBoard()
@@ -183,18 +237,8 @@ public class BoardManager : MonoBehaviour {
 			for(int y = 0; y < height; ++y){
 				BoardObject boardObject = currentBoard.at(x, y);
 				int id = boardObject.id;
-				GameObject obj = (GameObject)Instantiate(objectPrefabs[id], Vector3.zero, Quaternion.identity);
-				obj.transform.parent = transform;
-                Vector3 startPos = getPosition(x, y);
-                startPos.y += ((y + 1) *( objectHeight * Random.Range(1, 3) )) + objectHeight * 7;
-                obj.transform.localPosition = startPos;
 
-                // делать немного выше и вызывать update position
-
-                obj.transform.localEulerAngles = new Vector3(0, 0, -4.5f);
-
-				Block block = obj.GetComponent<Block>();
-				block.setIDs(x, y);
+				Block block = createBlockAt(x, y, id);
 				boardObject.setBlock(block);
              }
 		}

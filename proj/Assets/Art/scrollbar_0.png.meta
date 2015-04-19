@@ -1,6 +1,11 @@
 fileFormatVersion: 2
 guid: 1face8be1f051184cbcf5fa9aa4f7164
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: scrollbar_0_0
+    21300002: scrollbar_0_1
+    21300004: scrollbar_0_2
+    21300006: scrollbar_0_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
