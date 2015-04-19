@@ -12,6 +12,11 @@ public class PlayerResourcesManager : MonoBehaviour {
     [SerializeField]
     int currentMax = 10;
 
+    void Awake()
+    {
+        Game.Instance.playerResourcesManager = this;
+    }
+
 	// Use this for initialization
 	void Start () {
         setNewAmount(currentMax);

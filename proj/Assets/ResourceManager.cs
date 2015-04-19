@@ -12,6 +12,9 @@ public class ResourceManager : MonoBehaviour {
     [SerializeField]
     Color labelColorMax;
 
+    [SerializeField]
+    ResourceType resourceType;
+
 	int amount = 0;
 	public int max = 10;
 

@@ -1112,6 +1112,10 @@ Prefab:
       propertyPath: m_Name
       value: GoldSprite
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
+      propertyPath: resourceType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
   m_RootGameObject: {fileID: 1842077423}
@@ -2471,6 +2475,7 @@ MonoBehaviour:
   amountLabel: {fileID: 1015349976}
   labelColorNormal: {r: 1, g: 1, b: 1, a: 1}
   labelColorMax: {r: 1, g: .382352948, b: .382352948, a: 1}
+  resourceType: 2
   max: 10
 --- !u!114 &355818896
 MonoBehaviour:
@@ -3068,6 +3073,7 @@ MonoBehaviour:
   amountLabel: {fileID: 1723686393}
   labelColorNormal: {r: 1, g: 1, b: 1, a: 1}
   labelColorMax: {r: 1, g: .382352948, b: .382352948, a: 1}
+  resourceType: 4
   max: 10
 --- !u!1 &495122769
 GameObject:
@@ -4035,6 +4041,7 @@ MonoBehaviour:
   amountLabel: {fileID: 2043474484}
   labelColorNormal: {r: 1, g: 1, b: 1, a: 1}
   labelColorMax: {r: 1, g: .382352948, b: .382352948, a: 1}
+  resourceType: 3
   max: 10
 --- !u!114 &641389318
 MonoBehaviour:
@@ -6999,6 +7006,10 @@ Prefab:
       propertyPath: m_Name
       value: CrystalSprite
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
+      propertyPath: resourceType
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
   m_RootGameObject: {fileID: 904244363}
@@ -7330,6 +7341,7 @@ MonoBehaviour:
   amountLabel: {fileID: 200700029}
   labelColorNormal: {r: 1, g: 1, b: 1, a: 1}
   labelColorMax: {r: 1, g: .382352948, b: .382352948, a: 1}
+  resourceType: 0
   max: 10
 --- !u!114 &1043116348
 MonoBehaviour:
@@ -9500,6 +9512,10 @@ Prefab:
     - target: {fileID: 100002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: m_Name
       value: MagicSprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
+      propertyPath: resourceType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
@@ -14812,6 +14828,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodSprite
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
+      propertyPath: resourceType
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
   m_RootGameObject: {fileID: 649759027}
@@ -16768,6 +16788,7 @@ MonoBehaviour:
   amountLabel: {fileID: 1449720376}
   labelColorNormal: {r: 1, g: 1, b: 1, a: 1}
   labelColorMax: {r: 1, g: .382352948, b: .382352948, a: 1}
+  resourceType: 1
   max: 10
 --- !u!114 &2110001406
 MonoBehaviour:

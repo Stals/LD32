@@ -25,6 +25,7 @@ public class Game  {
 	BoardManager boardManager;
     SoundManager _soundManager;
     ErrorHandler _errorHandler;
+    public PlayerResourcesManager playerResourcesManager;
 
 	Player player;
 

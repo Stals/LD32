@@ -77,7 +77,8 @@ public class ClientController : MonoBehaviour {
 	void Update () {
 	    // todo - dont check every time
 
-        giveButton.isEnabled = false;
+
+        giveButton.isEnabled = isEnough();
 	}
 
     void addRequirenment(Requirenment r){
@@ -87,5 +88,19 @@ public class ClientController : MonoBehaviour {
         var requirenment = req.GetComponent<RequirenmentController>();
         requirenment.create(r);
         requirenmentsGrid.Reposition();
+    }
+
+    // TODO probably will need to redo
+    bool isEnough(){
+
+        foreach (Requirenment req in client.requirenments)
+        {
+            //Game.Instance.playerResourcesManager();//
+            if(!false){
+                return false;
+
+            }
+        }
+        return true;
     }
 }
