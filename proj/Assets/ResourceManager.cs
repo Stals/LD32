@@ -13,7 +13,7 @@ public class ResourceManager : MonoBehaviour {
     Color labelColorMax;
 
 	int amount = 0;
-	int max = 10;
+	public int max = 10;
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +21,7 @@ public class ResourceManager : MonoBehaviour {
 	}
 
     public void upgradeMax(int nAmount){
-        max += nAmount;
+        max = nAmount;
     }
 	
 	// Update is called once per frame

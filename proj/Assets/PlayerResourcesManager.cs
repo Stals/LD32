@@ -14,7 +14,7 @@ public class PlayerResourcesManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+        setNewAmount(currentMax);
 	}
 	
 	// Update is called once per frame
@@ -25,15 +25,19 @@ public class PlayerResourcesManager : MonoBehaviour {
     public void upgradeMax()
     {
         //amountPerUpgrade
+        currentMax += amountPerUpgrade;
+        setNewAmount(currentMax);
+    }
 
+    void setNewAmount(int nAmount)
+    {
         var resources = GetComponentsInChildren<ResourceManager>();
-
+        
         foreach (ResourceManager r in resources)
         {
-            r.upgradeMax(amountPerUpgrade);
+            r.upgradeMax(nAmount);
         }
 
-        currentMax += amountPerUpgrade;;
         currentMaxLabel.text = "MAX: " + currentMax.ToString();
     }
 }

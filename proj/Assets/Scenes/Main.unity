@@ -155,7 +155,7 @@ Transform:
   m_Children:
   - {fileID: 635831802}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!82 &51797375
 AudioSource:
   m_ObjectHideFlags: 0
@@ -808,7 +808,7 @@ Transform:
   m_Children:
   - {fileID: 137749376}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!82 &138898052
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2372,6 +2372,7 @@ MonoBehaviour:
   amountLabel: {fileID: 1015349976}
   labelColorNormal: {r: 1, g: 1, b: 1, a: 1}
   labelColorMax: {r: 1, g: .382352948, b: .382352948, a: 1}
+  max: 10
 --- !u!114 &355818896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2968,6 +2969,7 @@ MonoBehaviour:
   amountLabel: {fileID: 1723686393}
   labelColorNormal: {r: 1, g: 1, b: 1, a: 1}
   labelColorMax: {r: 1, g: .382352948, b: .382352948, a: 1}
+  max: 10
 --- !u!1 &495122769
 GameObject:
   m_ObjectHideFlags: 0
@@ -3615,7 +3617,7 @@ Transform:
   m_Children:
   - {fileID: 355818894}
   m_Father: {fileID: 1704575830}
-  m_RootOrder: 4
+  m_RootOrder: 0
 --- !u!54 &600111363
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3850,6 +3852,7 @@ MonoBehaviour:
   amountLabel: {fileID: 2043474484}
   labelColorNormal: {r: 1, g: 1, b: 1, a: 1}
   labelColorMax: {r: 1, g: .382352948, b: .382352948, a: 1}
+  max: 10
 --- !u!114 &641389318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4030,7 +4033,7 @@ Transform:
   m_Children:
   - {fileID: 641389316}
   m_Father: {fileID: 1704575830}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!54 &649759029
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5129,7 +5132,7 @@ Transform:
   m_Children:
   - {fileID: 1016965029}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 5
+  m_RootOrder: 1
 --- !u!1 &885869413
 GameObject:
   m_ObjectHideFlags: 0
@@ -5209,7 +5212,7 @@ Transform:
   m_Children:
   - {fileID: 486703067}
   m_Father: {fileID: 1704575830}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!54 &904244365
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6860,6 +6863,7 @@ MonoBehaviour:
   amountLabel: {fileID: 200700029}
   labelColorNormal: {r: 1, g: 1, b: 1, a: 1}
   labelColorMax: {r: 1, g: .382352948, b: .382352948, a: 1}
+  max: 10
 --- !u!114 &1043116348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7599,7 +7603,7 @@ Transform:
   m_Children:
   - {fileID: 1043116346}
   m_Father: {fileID: 1704575830}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1188464252
 GameObject:
   m_ObjectHideFlags: 0
@@ -7958,7 +7962,7 @@ Transform:
   m_Children:
   - {fileID: 1517958172}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 3
+  m_RootOrder: 5
 --- !u!82 &1315415535
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9636,12 +9640,12 @@ Transform:
   m_LocalPosition: {x: -.162287205, y: .54238981, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1725031846}
+  - {fileID: 860940697}
   - {fileID: 51797374}
   - {fileID: 2104691249}
   - {fileID: 138898051}
   - {fileID: 1315415534}
-  - {fileID: 1725031846}
-  - {fileID: 860940697}
   m_Father: {fileID: 0}
   m_RootOrder: 9
 --- !u!1 &1552160214
@@ -11165,11 +11169,11 @@ Transform:
   m_LocalPosition: {x: -374.653015, y: 81.5106125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 600111362}
   - {fileID: 904244364}
   - {fileID: 1842077424}
   - {fileID: 1184015570}
   - {fileID: 649759028}
-  - {fileID: 600111362}
   m_Father: {fileID: 1596178738}
   m_RootOrder: 11
 --- !u!114 &1704575831
@@ -11380,7 +11384,7 @@ Transform:
   m_Children:
   - {fileID: 738337470}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 4
+  m_RootOrder: 0
 --- !u!82 &1725031847
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12623,7 +12627,7 @@ Transform:
   m_Children:
   - {fileID: 2110001404}
   m_Father: {fileID: 1704575830}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!54 &1842077425
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15304,7 +15308,7 @@ Transform:
   m_Children:
   - {fileID: 700556292}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!82 &2104691250
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15453,6 +15457,7 @@ MonoBehaviour:
   amountLabel: {fileID: 1449720376}
   labelColorNormal: {r: 1, g: 1, b: 1, a: 1}
   labelColorMax: {r: 1, g: .382352948, b: .382352948, a: 1}
+  max: 10
 --- !u!114 &2110001406
 MonoBehaviour:
   m_ObjectHideFlags: 0
