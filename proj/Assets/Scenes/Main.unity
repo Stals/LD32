@@ -155,7 +155,7 @@ Transform:
   m_Children:
   - {fileID: 635831802}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 4
+  m_RootOrder: 1
 --- !u!82 &51797375
 AudioSource:
   m_ObjectHideFlags: 0
@@ -820,7 +820,7 @@ Transform:
   m_Children:
   - {fileID: 137749376}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 1
+  m_RootOrder: 4
 --- !u!82 &138898052
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1019,7 +1019,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: mWidth
-      value: 4680
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: aspectRatio
@@ -1244,7 +1244,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: .800000012
+  aspectRatio: 117
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 3a06bafb9da99a942a0c4021b42cda1c, type: 3}
   mFont: {fileID: 0}
@@ -1385,7 +1385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &229236272
 Transform:
   m_ObjectHideFlags: 0
@@ -1525,7 +1525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &245910552
 Transform:
   m_ObjectHideFlags: 0
@@ -1757,7 +1757,7 @@ MonoBehaviour:
   alwaysOnScreen: 0
   anchorOffset: 0
   renderQueue: 0
-  startingRenderQueue: 3004
+  startingRenderQueue: 3012
   mAlpha: 1
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
@@ -3393,7 +3393,7 @@ MonoBehaviour:
   alwaysOnScreen: 0
   anchorOffset: 0
   renderQueue: 0
-  startingRenderQueue: 3000
+  startingRenderQueue: 3010
   mAlpha: 0
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
@@ -3642,7 +3642,7 @@ Transform:
   m_Children:
   - {fileID: 355818894}
   m_Father: {fileID: 1704575830}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!54 &600111363
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3695,12 +3695,12 @@ MonoBehaviour:
   alwaysOnScreen: 0
   anchorOffset: 0
   renderQueue: 0
-  startingRenderQueue: 3004
+  startingRenderQueue: 3008
   mAlpha: 1
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
   mClipSoftness: {x: 4, y: 4}
-  mDepth: 3
+  mDepth: -2
   mSortingOrder: 0
   mClipOffset: {x: 0, y: 0}
 --- !u!1 &628365084
@@ -4058,7 +4058,7 @@ Transform:
   m_Children:
   - {fileID: 641389316}
   m_Father: {fileID: 1704575830}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!54 &649759029
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4111,12 +4111,12 @@ MonoBehaviour:
   alwaysOnScreen: 0
   anchorOffset: 0
   renderQueue: 0
-  startingRenderQueue: 3006
+  startingRenderQueue: 3008
   mAlpha: 1
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
   mClipSoftness: {x: 4, y: 4}
-  mDepth: 3
+  mDepth: -2
   mSortingOrder: 0
   mClipOffset: {x: 0, y: 0}
 --- !u!1 &662938538
@@ -4467,8 +4467,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0, g: 0, b: 0, a: .737254918}
   mPivot: 4
-  mWidth: 142
-  mHeight: 32
+  mWidth: 108
+  mHeight: 30
   mDepth: 5
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -5162,7 +5162,7 @@ Transform:
   m_Children:
   - {fileID: 1016965029}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 5
+  m_RootOrder: 2
 --- !u!1 &885869413
 GameObject:
   m_ObjectHideFlags: 0
@@ -5242,7 +5242,7 @@ Transform:
   m_Children:
   - {fileID: 486703067}
   m_Father: {fileID: 1704575830}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!54 &904244365
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5295,12 +5295,12 @@ MonoBehaviour:
   alwaysOnScreen: 0
   anchorOffset: 0
   renderQueue: 0
-  startingRenderQueue: 3012
+  startingRenderQueue: 3008
   mAlpha: 1
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
   mClipSoftness: {x: 4, y: 4}
-  mDepth: 3
+  mDepth: -2
   mSortingOrder: 0
   mClipOffset: {x: 0, y: 0}
 --- !u!1 &906207273
@@ -6353,7 +6353,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: .800000012
+  aspectRatio: 117
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 3a06bafb9da99a942a0c4021b42cda1c, type: 3}
   mFont: {fileID: 0}
@@ -6610,7 +6610,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: mWidth
-      value: 4680
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: m_Name
@@ -6785,7 +6785,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1042852296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -300.653015, y: -51.4893913, z: 0}
+  m_LocalPosition: {x: -328, y: -46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1596178738}
@@ -6831,7 +6831,7 @@ MonoBehaviour:
   mTrueTypeFont: {fileID: 12800000, guid: 3a06bafb9da99a942a0c4021b42cda1c, type: 3}
   mFont: {fileID: 0}
   mText: 'MAX: 10'
-  mFontSize: 30
+  mFontSize: 25
   mFontStyle: 0
   mAlignment: 0
   mEncoding: 1
@@ -7207,11 +7207,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -304.276947
+      value: -328
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -87.4354248
+      value: -88
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7264,6 +7264,26 @@ Prefab:
     - target: {fileID: 11400000, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
       propertyPath: onClick.Array.data[0].mMethodName
       value: upgradeMax
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
+      propertyPath: mWidth
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
+      propertyPath: aspectRatio
+      value: 3.05263162
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
+      propertyPath: m_Size.x
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
+      propertyPath: mHeight
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
+      propertyPath: m_Size.y
+      value: 38
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
@@ -7627,7 +7647,7 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
   mClipSoftness: {x: 4, y: 4}
-  mDepth: 3
+  mDepth: -2
   mSortingOrder: 0
   mClipOffset: {x: 0, y: 0}
 --- !u!4 &1184015570
@@ -7642,7 +7662,7 @@ Transform:
   m_Children:
   - {fileID: 1043116346}
   m_Father: {fileID: 1704575830}
-  m_RootOrder: 1
+  m_RootOrder: 4
 --- !u!1 &1188464252
 GameObject:
   m_ObjectHideFlags: 0
@@ -8001,7 +8021,7 @@ Transform:
   m_Children:
   - {fileID: 1517958172}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 2
+  m_RootOrder: 5
 --- !u!82 &1315415535
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8170,7 +8190,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: mWidth
-      value: 4680
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: m_Name
@@ -8415,7 +8435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1372495510
 Transform:
   m_ObjectHideFlags: 0
@@ -8662,7 +8682,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: mWidth
-      value: 4680
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: m_Name
@@ -8748,7 +8768,7 @@ Transform:
   m_PrefabInternal: {fileID: 1104253202}
   m_GameObject: {fileID: 1398417200}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -304.276947, y: -87.4354248, z: 0}
+  m_LocalPosition: {x: -328, y: -88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 724149700}
@@ -8766,7 +8786,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 150, y: 40, z: 0}
+  m_Size: {x: 116, y: 38, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1398417203
 MonoBehaviour:
@@ -8829,13 +8849,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 150
-  mHeight: 40
+  mWidth: 116
+  mHeight: 38
   mDepth: 4
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.75
+  aspectRatio: 3.05263162
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -9056,7 +9076,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: .800000012
+  aspectRatio: 117
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 3a06bafb9da99a942a0c4021b42cda1c, type: 3}
   mFont: {fileID: 0}
@@ -9233,7 +9253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1488494168
 Transform:
   m_ObjectHideFlags: 0
@@ -9323,7 +9343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1495492319
 Transform:
   m_ObjectHideFlags: 0
@@ -9697,12 +9717,12 @@ Transform:
   m_LocalPosition: {x: -.162287205, y: .54238981, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2104691249}
-  - {fileID: 138898051}
-  - {fileID: 1315415534}
   - {fileID: 1725031846}
   - {fileID: 51797374}
   - {fileID: 860940697}
+  - {fileID: 2104691249}
+  - {fileID: 138898051}
+  - {fileID: 1315415534}
   m_Father: {fileID: 0}
   m_RootOrder: 9
 --- !u!1 &1552160214
@@ -10297,7 +10317,7 @@ MonoBehaviour:
   alwaysOnScreen: 0
   anchorOffset: 0
   renderQueue: 0
-  startingRenderQueue: 3000
+  startingRenderQueue: 3010
   mAlpha: 1
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
@@ -11124,7 +11144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1695433204
 Transform:
   m_ObjectHideFlags: 0
@@ -11226,11 +11246,11 @@ Transform:
   m_LocalPosition: {x: -374.653015, y: 81.5106125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1842077424}
-  - {fileID: 1184015570}
   - {fileID: 649759028}
   - {fileID: 600111362}
   - {fileID: 904244364}
+  - {fileID: 1842077424}
+  - {fileID: 1184015570}
   m_Father: {fileID: 1596178738}
   m_RootOrder: 11
 --- !u!114 &1704575831
@@ -11384,7 +11404,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: .800000012
+  aspectRatio: 117
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 3a06bafb9da99a942a0c4021b42cda1c, type: 3}
   mFont: {fileID: 0}
@@ -11441,7 +11461,7 @@ Transform:
   m_Children:
   - {fileID: 738337470}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 3
+  m_RootOrder: 0
 --- !u!82 &1725031847
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12684,7 +12704,7 @@ Transform:
   m_Children:
   - {fileID: 2110001404}
   m_Father: {fileID: 1704575830}
-  m_RootOrder: 0
+  m_RootOrder: 3
 --- !u!54 &1842077425
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12737,12 +12757,12 @@ MonoBehaviour:
   alwaysOnScreen: 0
   anchorOffset: 0
   renderQueue: 0
-  startingRenderQueue: 3010
+  startingRenderQueue: 3008
   mAlpha: 1
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
   mClipSoftness: {x: 4, y: 4}
-  mDepth: 3
+  mDepth: -2
   mSortingOrder: 0
   mClipOffset: {x: 0, y: 0}
 --- !u!1 &1860157310
@@ -13173,7 +13193,7 @@ MonoBehaviour:
   alwaysOnScreen: 0
   anchorOffset: 0
   renderQueue: 0
-  startingRenderQueue: 3004
+  startingRenderQueue: 3012
   mAlpha: 1
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
@@ -13571,7 +13591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1909211334
 Transform:
   m_ObjectHideFlags: 0
@@ -13701,7 +13721,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: aspectRatio
-      value: 117
+      value: .850000024
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: m_LocalScale.x
@@ -13725,7 +13745,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: mWidth
-      value: 4680
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: m_Name
@@ -13831,7 +13851,7 @@ MonoBehaviour:
   alwaysOnScreen: 0
   anchorOffset: 0
   renderQueue: 0
-  startingRenderQueue: 3004
+  startingRenderQueue: 3012
   mAlpha: 1
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
@@ -15018,7 +15038,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: .800000012
+  aspectRatio: .850000024
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 3a06bafb9da99a942a0c4021b42cda1c, type: 3}
   mFont: {fileID: 0}
@@ -15369,7 +15389,7 @@ Transform:
   m_Children:
   - {fileID: 700556292}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 0
+  m_RootOrder: 3
 --- !u!82 &2104691250
 AudioSource:
   m_ObjectHideFlags: 0
