@@ -25,6 +25,12 @@ public class RequirenmentController : MonoBehaviour {
     [SerializeField]
     UILabel amountLabel;
 
+    [SerializeField]
+    Color notEnoughColor;
+
+    [SerializeField]
+    Color enoughColor;
+
     Requirenment requirenment;
 
 	// Use this for initialization
@@ -42,7 +48,18 @@ public class RequirenmentController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+        int current = Game.Instance.playerResourcesManager.getAmountByType(requirenment.type);
+        current = Mathf.Min(current, requirenment.amount);
+
+        amountLabel.text = current.ToString() + " / " + requirenment.amount.ToString();
+
+        if (current >= requirenment.amount)
+        {
+            amountLabel.color = enoughColor;
+        } else
+        {
+            amountLabel.color = notEnoughColor;
+        }
 	}
 
     static string typeToSprite(ResourceType type){
