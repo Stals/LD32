@@ -25,6 +25,16 @@ public class ForgeController : MonoBehaviour {
     [SerializeField]
     GameObject VeryHighHeatEnd;
 
+
+    [SerializeField]
+    GameObject LowSelect;
+    [SerializeField]
+    GameObject MediumSelect;
+    [SerializeField]
+    GameObject HighSelect;
+    [SerializeField]
+    GameObject VeryHighSelect;
+    
     void Awake(){
         Game.Instance.forgeController = this;
 
@@ -46,7 +56,28 @@ public class ForgeController : MonoBehaviour {
         Vector3 newArrowPosition = arrow.transform.localPosition;
         newArrowPosition.y = getArrowPosition();
         arrow.transform.localPosition = newArrowPosition;
+
+        updateSelect();
 	}
+
+    public void updateSelect()
+    {
+        LowSelect.SetActive(false);
+        MediumSelect.SetActive(false);
+        HighSelect.SetActive(false);
+        VeryHighSelect.SetActive(false);
+        
+        HeatType type =  getCurrentHeat();
+
+        switch (type)
+        {
+            case HeatType.Low: LowSelect.SetActive(true); break;
+            case HeatType.High: HighSelect.SetActive(true); break;
+            case HeatType.Medium: MediumSelect.SetActive(true); break;
+            case HeatType.VeryHigh: VeryHighSelect.SetActive(true); break;
+             
+        }
+    }
 
     public void onHeatClick(){
         currentHeat += heatPerClick;
@@ -61,7 +92,7 @@ public class ForgeController : MonoBehaviour {
     }
 
     float getArrowPosition(){
-        return currentHeat * forgeHeight + 45;
+        return currentHeat * forgeHeight + 30;
     }
 
     public HeatType getCurrentHeat()
