@@ -234,7 +234,7 @@ Transform:
   m_Children:
   - {fileID: 635831802}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!82 &51797375
 AudioSource:
   m_ObjectHideFlags: 0
@@ -899,7 +899,7 @@ Transform:
   m_Children:
   - {fileID: 137749376}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 5
+  m_RootOrder: 1
 --- !u!82 &138898052
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1106,11 +1106,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: mSpriteName
-      value: leather
+      value: gold
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: m_Name
-      value: LeatherSprite
+      value: GoldSprite
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
@@ -2037,7 +2037,7 @@ Transform:
   - {fileID: 1026376898}
   - {fileID: 1943389351}
   m_Father: {fileID: 1909211334}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &286081896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2437,7 +2437,7 @@ GameObject:
   - 114: {fileID: 355818896}
   - 114: {fileID: 355818895}
   m_Layer: 5
-  m_Name: WoolSprite
+  m_Name: MagicSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2521,7 +2521,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11429880, guid: 7ac19e631d87666429cf891f4974afae, type: 2}
-  mSpriteName: wool
+  mSpriteName: magic
   mFillCenter: 1
 --- !u!1 &359290905
 GameObject:
@@ -4792,7 +4792,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4ef08e7bdf22a424abd8f15f5b646140, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b02327f331d844ab681ed5119aaac5e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &754545702
 GameObject:
@@ -4989,7 +4989,7 @@ Transform:
   - {fileID: 1662698078}
   - {fileID: 1946686558}
   m_Father: {fileID: 1909211334}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &760007512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5437,7 +5437,7 @@ Transform:
   m_Children:
   - {fileID: 1016965029}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 3
+  m_RootOrder: 5
 --- !u!1 &881018459
 GameObject:
   m_ObjectHideFlags: 0
@@ -7907,7 +7907,7 @@ Prefab:
     - target: {fileID: 21200000, guid: 2124d42f729614865b6c2c8b42eb4608, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4ef08e7bdf22a424abd8f15f5b646140,
+      objectReference: {fileID: 21300000, guid: b02327f331d844ab681ed5119aaac5e1,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2124d42f729614865b6c2c8b42eb4608, type: 2}
@@ -8762,7 +8762,7 @@ Transform:
   - {fileID: 1725554666}
   - {fileID: 250346772}
   m_Father: {fileID: 1909211334}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!114 &1314250000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8832,7 +8832,7 @@ Transform:
   m_Children:
   - {fileID: 1517958172}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!82 &1315415535
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9421,7 +9421,7 @@ Prefab:
     - target: {fileID: 21200000, guid: e07ddedeaf0b64761889625afe171179, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: bf2fce177630b4ea7854a17c25b56dcd,
+      objectReference: {fileID: 21300000, guid: 203bdbdf029cf45ba923db1ef2907aa6,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e07ddedeaf0b64761889625afe171179, type: 2}
@@ -9539,7 +9539,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: mSpriteName
-      value: wool
+      value: magic
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: mWidth
@@ -9547,7 +9547,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
       propertyPath: m_Name
-      value: WoolSprite
+      value: MagicSprite
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cc18cdf62d3742939ff0fe8efe9a689, type: 2}
@@ -10666,7 +10666,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bf2fce177630b4ea7854a17c25b56dcd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 203bdbdf029cf45ba923db1ef2907aa6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1534800904
 GameObject:
@@ -10693,12 +10693,12 @@ Transform:
   m_LocalPosition: {x: -.162287205, y: .54238981, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 2104691249}
+  - {fileID: 138898051}
   - {fileID: 1315415534}
   - {fileID: 1725031846}
   - {fileID: 51797374}
   - {fileID: 860940697}
-  - {fileID: 2104691249}
-  - {fileID: 138898051}
   m_Father: {fileID: 0}
   m_RootOrder: 9
 --- !u!1 &1552160214
@@ -12488,7 +12488,7 @@ Transform:
   m_Children:
   - {fileID: 738337470}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!82 &1725031847
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13694,7 +13694,7 @@ Transform:
   - {fileID: 177505948}
   - {fileID: 1607593907}
   m_Father: {fileID: 1909211334}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!114 &1825075030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14710,11 +14710,11 @@ Transform:
   m_LocalPosition: {x: .756282568, y: .93499434, z: 0}
   m_LocalScale: {x: .00277777785, y: .00277777785, z: .00277777785}
   m_Children:
-  - {fileID: 2066485101}
   - {fileID: 1314249999}
   - {fileID: 760007511}
   - {fileID: 286081895}
   - {fileID: 1825075029}
+  - {fileID: 2066485101}
   m_Father: {fileID: 717394829}
   m_RootOrder: 7
 --- !u!114 &1909211335
@@ -16363,7 +16363,7 @@ Transform:
   - {fileID: 1580674803}
   - {fileID: 543494668}
   m_Father: {fileID: 1909211334}
-  m_RootOrder: 0
+  m_RootOrder: 4
 --- !u!1 &2086541137
 GameObject:
   m_ObjectHideFlags: 0
@@ -16618,7 +16618,7 @@ Transform:
   m_Children:
   - {fileID: 700556292}
   m_Father: {fileID: 1534800905}
-  m_RootOrder: 4
+  m_RootOrder: 0
 --- !u!82 &2104691250
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16733,7 +16733,7 @@ GameObject:
   - 114: {fileID: 2110001406}
   - 114: {fileID: 2110001405}
   m_Layer: 5
-  m_Name: LeatherSprite
+  m_Name: GoldSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16817,7 +16817,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11429880, guid: 7ac19e631d87666429cf891f4974afae, type: 2}
-  mSpriteName: leather
+  mSpriteName: gold
   mFillCenter: 1
 --- !u!1 &2130704577
 GameObject:
