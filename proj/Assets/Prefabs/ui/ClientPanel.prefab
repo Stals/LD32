@@ -915,6 +915,7 @@ MonoBehaviour:
   requirenmentsGrid: {fileID: 11400018}
   requirenmentPrefab: {fileID: 100002, guid: 6be5417734b1c4a7dbb02762dc6cbfe9, type: 2}
   patienceBar: {fileID: 11400004}
+  giveButton: {fileID: 11400012}
 --- !u!114 &11400026
 MonoBehaviour:
   m_ObjectHideFlags: 1

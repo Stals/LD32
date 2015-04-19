@@ -30,9 +30,6 @@ public class Client{
     public void addRequirenment(Requirenment _req){
         requirenments.Add(_req);
     }
-
-
-   
 }
 
 public class ClientController : MonoBehaviour {
@@ -45,6 +42,8 @@ public class ClientController : MonoBehaviour {
     public GameObject requirenmentPrefab;
 
     public UIProgressBar patienceBar;
+
+    public UIButton giveButton;
 
     Client client;
 
@@ -70,11 +69,15 @@ public class ClientController : MonoBehaviour {
 
         Sprite t2 = Resources.Load <Sprite> ("items/" + client.item);
         itemIcon.sprite2D = t2;
+
+        // TODO heat
     }
 
 	// Update is called once per frame
 	void Update () {
-	
+	    // todo - dont check every time
+
+        giveButton.isEnabled = false;
 	}
 
     void addRequirenment(Requirenment r){
