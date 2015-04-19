@@ -102,4 +102,12 @@ public class ClientController : MonoBehaviour {
         }
         return true;
     }
+
+    public void onGiveButtonClick()
+    {
+        foreach (Requirenment req in client.requirenments)
+        {
+            Game.Instance.playerResourcesManager.reduceAmountByType(req.type, req.amount);
+        }
+    }
 }

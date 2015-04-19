@@ -33,6 +33,10 @@ public class ResourceManager : MonoBehaviour {
         return amount;
     }
 	
+    public void remove(int am){
+        amount -= am;
+    }
+
 	// Update is called once per frame
 	void Update () {
 		amountLabel.text = amount.ToString ();

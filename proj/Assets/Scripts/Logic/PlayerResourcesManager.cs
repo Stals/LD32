@@ -59,4 +59,16 @@ public class PlayerResourcesManager : MonoBehaviour {
         return -1;
 
     }
+
+    public void reduceAmountByType(ResourceType type, int amount){
+        var resources = GetComponentsInChildren<ResourceManager>();
+        
+        foreach (ResourceManager r in resources)
+        {
+            if(r.resourceType == type){
+                r.remove(amount);
+                return;
+            }
+        }
+    }
 }
