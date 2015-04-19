@@ -42,7 +42,7 @@ public class ForgeController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        forgeHeight = forgeSprite.height;
+        forgeHeight = forgeSprite.height - 45;
 	}
 	
 	// Update is called once per frame
