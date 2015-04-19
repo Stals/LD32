@@ -24,7 +24,7 @@ public class Client{
     public float patience = 5f; // strating minimum patience
 
     // settings
-    float patiencePerResource = 0.2f;
+    float patiencePerResource = 0.4f;
 
 // todo heat type
     public Client(string _avatar, string _item, HeatType type = HeatType.Any)
@@ -59,6 +59,10 @@ public class ClientController : MonoBehaviour {
     Client client;
     ClientSpace currentSpace;
 
+    float patienceLeft;
+
+    bool isActivated = true;
+
 	// Use this for initialization
 	void Start () {
         /*Client client1 = new Client("knight", "sword");
@@ -71,6 +75,8 @@ public class ClientController : MonoBehaviour {
     public void create(Client _client, ClientSpace space){
         client = _client;
         currentSpace = space;
+
+        patienceLeft = client.patience;
 
         foreach (Requirenment req in client.requirenments)
         {
@@ -90,8 +96,22 @@ public class ClientController : MonoBehaviour {
 	void Update () {
 	    // todo - dont check every time
 
+        if (!isActivated)
+        {
+            return;
+        }
 
         giveButton.isEnabled = isEnough();
+
+        // update patience
+        patienceLeft -= Time.deltaTime;
+        patienceBar.value = (patienceLeft / client.patience);
+
+        if (patienceLeft <= 0)
+        {
+            // once
+            removeSelf();
+        }
 	}
 
     void addRequirenment(Requirenment r){
@@ -122,9 +142,16 @@ public class ClientController : MonoBehaviour {
         {
             Game.Instance.playerResourcesManager.reduceAmountByType(req.type, req.amount);
         }
+
+        removeSelf();
+    }
+    void removeSelf()
+    {
+        isActivated = false;
+
         // TODO animation + destory after time
         float animationTime = 1f;
-
+        
         /*Vector3 finish = gameObject.transform.position;
         finish.y -= 100;
 
@@ -132,14 +159,14 @@ public class ClientController : MonoBehaviour {
 
         
         gameObject.MoveTo(path, animationTime, 0, EaseType.easeInSine);*/
-
+        
         gameObject.MoveBy(new Vector3(0f, 0.75f, 0f), animationTime, 0, EaseType.easeInOutSine );
-
+        
         Destroy(gameObject, animationTime);
-
+        
         //NGUITools.Destroy(this.gameObject, );
-
     }
+
     void OnDestroy() {
         // set space to free !!!
         currentSpace.empty = true;
