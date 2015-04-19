@@ -50,7 +50,7 @@ public class ClientController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Client client1 = new Client("Knight", "Sword");
+        Client client1 = new Client("knight", "sword");
         client1.addRequirenment(new Requirenment(ResourceType.Wood, 2));
         client1.addRequirenment(new Requirenment(ResourceType.Metal, 3));
 
@@ -64,9 +64,12 @@ public class ClientController : MonoBehaviour {
         {
             addRequirenment(req);
         }
+       
+        Sprite t1 = Resources.Load <Sprite> ("clients/" + client.avatar);
+        avatar.sprite2D = t1;
 
-        // avatar
-        // item
+        Sprite t2 = Resources.Load <Sprite> ("items/" + client.item);
+        itemIcon.sprite2D = t2;
     }
 
 	// Update is called once per frame
