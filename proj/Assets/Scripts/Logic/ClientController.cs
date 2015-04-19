@@ -50,8 +50,8 @@ public class ClientController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Client client1 = new Client("knight", "sword");
-        client1.addRequirenment(new Requirenment(ResourceType.Wood, 2));
-        client1.addRequirenment(new Requirenment(ResourceType.Metal, 3));
+        //client1.addRequirenment(new Requirenment(ResourceType.Wood, 2));
+        //client1.addRequirenment(new Requirenment(ResourceType.Metal, 3));
 
         create(client1);
 	}
@@ -109,5 +109,22 @@ public class ClientController : MonoBehaviour {
         {
             Game.Instance.playerResourcesManager.reduceAmountByType(req.type, req.amount);
         }
+        // TODO animation + destory after time
+        float animationTime = 1f;
+
+        /*Vector3 finish = gameObject.transform.position;
+        finish.y -= 100;
+
+        Vector3[] path = new Vector3[2] {gameObject.transform.position, finish};
+
+        
+        gameObject.MoveTo(path, animationTime, 0, EaseType.easeInSine);*/
+
+        gameObject.MoveBy(new Vector3(0f, 0.75f, 0f), animationTime, 0, EaseType.easeInOutSine );
+
+        Destroy(gameObject, animationTime);
+
+        //NGUITools.Destroy(this.gameObject, );
+
     }
 }

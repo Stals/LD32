@@ -541,7 +541,13 @@ public static class iTweenExtensions
 	public static void MoveBy(this GameObject go,Vector3 amount,float time,float delay,EaseType easeType){
 		iTween.MoveBy(go,iTween.Hash("amount",amount,"time",time,"delay",delay,"easeType",easeType.ToString()));
 	}
+
+    public static void MoveBy(this GameObject go,Vector3 amount,float time,float delay,EaseType easeType, bool isLocal){
+        iTween.MoveBy(go,iTween.Hash("amount",amount,"time",time,"delay",delay,"easeType",easeType.ToString(), "islocal", isLocal));
+    }
 	
+
+
 	/// <summary>
 	/// Adds the supplied coordinates to a GameObject's position.
 	/// </summary>
