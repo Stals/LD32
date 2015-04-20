@@ -34,6 +34,12 @@ public class ForgeController : MonoBehaviour {
     GameObject HighSelect;
     [SerializeField]
     GameObject VeryHighSelect;
+
+    [SerializeField]
+    AudioSource waterSound;
+
+    [SerializeField]
+    AudioSource clickSound;
     
     void Awake(){
         Game.Instance.forgeController = this;
@@ -89,6 +95,7 @@ public class ForgeController : MonoBehaviour {
 
     public void onWaterClick(){
         currentHeat = 0;
+        waterSound.Play();
     }
 
     float getArrowPosition(){
