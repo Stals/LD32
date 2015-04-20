@@ -241,9 +241,14 @@ public class ClientController : MonoBehaviour {
             statusLabel.text = "Needs Heat";
             selectHeat.SetActive(false);
             enough =  false;
+
+            if ((Game.Instance.forgeController.getCurrentHeat() < client.heatType)) {
+                Game.Instance.forgeController.setClickHintVisible(true);
+            }
         } else
         {
             selectHeat.SetActive(true);
+            Game.Instance.forgeController.setClickHintVisible(false);
         }
 
         foreach (Requirenment req in client.requirenments)

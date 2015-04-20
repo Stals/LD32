@@ -40,6 +40,9 @@ public class ForgeController : MonoBehaviour {
 
     [SerializeField]
     AudioSource clickSound;
+
+    [SerializeField]
+    UILabel clickHintLabel;
     
     void Awake(){
         Game.Instance.forgeController = this;
@@ -65,6 +68,10 @@ public class ForgeController : MonoBehaviour {
 
         updateSelect();
 	}
+
+    public void setClickHintVisible(bool visible) {
+        clickHintLabel.gameObject.SetActive(visible);
+    }
 
     public void updateSelect()
     {

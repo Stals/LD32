@@ -48,13 +48,13 @@ public class ClientSpawner : MonoBehaviour {
 
             day.clientsPerDay = 3;
             {
-                Client client = new Client(getHeroName(), "", HeatType.Low);
+                Client client = new Client(getHeroName(), "", HeatType.Medium);
                 client.addRequirenment(new Requirenment(ResourceType.Wood, Random.Range(1, 3)));
                 day.Add(client);
             }
 
             {
-                Client client = new Client(getHeroName(), "", HeatType.Low);
+                Client client = new Client(getHeroName(), "", HeatType.Medium);
                 client.addRequirenment(new Requirenment(ResourceType.Metal, Random.Range(1, 3)));
                 day.Add(client);
             }
