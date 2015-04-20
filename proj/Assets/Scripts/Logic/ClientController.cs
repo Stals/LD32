@@ -162,7 +162,7 @@ public class ClientController : MonoBehaviour {
         }
 
 
-        if (isEnough())
+        if (isEnough() && forgingBar.value < 1)
         {
             statusLabel.text = "Forging...";
             updateForging();
