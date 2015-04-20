@@ -61,7 +61,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 30
   mHeight: 30
-  mDepth: 9
+  mDepth: -99999
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0

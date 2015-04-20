@@ -131,7 +131,7 @@ public class Block : MonoBehaviour {
         Camera uiCamera = UICamera.mainCamera;
 
 
-        GameObject guiObject = NGUITools.AddChild(uiCamera.transform.parent.gameObject, fakeBlock);
+        GameObject guiObject = NGUITools.AddChild(uiTarget.transform.parent.gameObject, fakeBlock);
         
 
 
