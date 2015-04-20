@@ -218,6 +218,10 @@ public class ClientController : MonoBehaviour {
             if (patienceLeft <= 0)
             {
                 finishFail.Play();
+                Game.Instance.playerStuffManager.health -= 1;
+                if (Game.Instance.playerStuffManager.health < 0) {
+                    Game.Instance.playerStuffManager.health = 0;
+                }
                 // once
                 removeSelf();
             }
