@@ -203,7 +203,7 @@ public class ClientController : MonoBehaviour {
 
     void updateForging()
     {
-        forgingBar.value += 0.1f * Time.deltaTime;
+        forgingBar.value += 0.2f * Time.deltaTime;
     }
 
     void updatePatience()
