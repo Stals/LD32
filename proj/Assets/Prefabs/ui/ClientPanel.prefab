@@ -27,7 +27,7 @@ GameObject:
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400004}
   m_Layer: 5
-  m_Name: PatienceBar
+  m_Name: ForgingBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -213,6 +213,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &123654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 423654}
+  - 114: {fileID: 11423656}
+  - 114: {fileID: 11423654}
+  m_Layer: 5
+  m_Name: PatienceBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -223,7 +240,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 2.17000008, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400002}
+  m_Father: {fileID: 423654}
   m_RootOrder: 0
 --- !u!4 &400002
 Transform:
@@ -232,12 +249,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -16, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 400000}
+  m_LocalPosition: {x: 0, y: -115, z: 0}
+  m_LocalScale: {x: .999952853, y: .999952853, z: 1.00007999}
+  m_Children: []
   m_Father: {fileID: 400020}
-  m_RootOrder: 7
+  m_RootOrder: 10
 --- !u!4 &400006
 Transform:
   m_ObjectHideFlags: 1
@@ -329,7 +345,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -670.909973, y: -76.2600021, z: 0}
+  m_LocalPosition: {x: -670.909973, y: -541.26001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400018}
@@ -339,9 +355,10 @@ Transform:
   - {fileID: 400010}
   - {fileID: 400008}
   - {fileID: 400006}
-  - {fileID: 400002}
+  - {fileID: 423654}
   - {fileID: 400022}
   - {fileID: 416514}
+  - {fileID: 400002}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400022
@@ -381,6 +398,19 @@ Transform:
   - {fileID: 416512}
   m_Father: {fileID: 400020}
   m_RootOrder: 9
+--- !u!4 &423654
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123654}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -16, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 400000}
+  m_Father: {fileID: 400020}
+  m_RootOrder: 7
 --- !u!54 &5400000
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -406,7 +436,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 138, y: 20, z: 0}
+  m_Size: {x: 136, y: 22, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -444,7 +474,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 2.30769229
+  aspectRatio: 2.69230771
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: eba54a50d17261f40b8fe1dc21365516, type: 3}
   mFont: {fileID: 0}
@@ -518,7 +548,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11429880, guid: 7ac19e631d87666429cf891f4974afae, type: 2}
-  mSpriteName: bar_patience
+  mSpriteName: bar_forging
   mFillCenter: 1
 --- !u!114 &11400004
 MonoBehaviour:
@@ -534,7 +564,7 @@ MonoBehaviour:
   thumb: {fileID: 0}
   mBG: {fileID: 11400002}
   mFG: {fileID: 11400002}
-  mValue: 1
+  mValue: 0
   mFill: 0
   numberOfSteps: 0
   onChange: []
@@ -572,13 +602,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 138
-  mHeight: 20
+  mWidth: 136
+  mHeight: 22
   mDepth: 4
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 6.9000001
+  aspectRatio: 6.18181801
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -668,7 +698,7 @@ MonoBehaviour:
   tweenTarget: {fileID: 100006}
   hover: {r: .720588207, g: .720588207, b: .720588207, a: 1}
   pressed: {r: .470588207, g: .470588207, b: .470588207, a: 1}
-  disabledColor: {r: .5, g: .5, b: .5, a: .505882382}
+  disabledColor: {r: .5, g: .5, b: .5, a: 0}
   duration: .200000003
   dragHighlight: 0
   hoverSprite: 
@@ -926,10 +956,11 @@ MonoBehaviour:
   heatIcon: {fileID: 11400014}
   requirenmentsGrid: {fileID: 11400018}
   requirenmentPrefab: {fileID: 100002, guid: 6be5417734b1c4a7dbb02762dc6cbfe9, type: 2}
-  patienceBar: {fileID: 11400004}
+  patienceBar: {fileID: 11423654}
   giveButton: {fileID: 11400012}
   moneyRewardLabel: {fileID: 11416512}
   statusLabel: {fileID: 11400010}
+  forgingBar: {fileID: 11400004}
   selectHeat: {fileID: 100022}
 --- !u!114 &11400026
 MonoBehaviour:
@@ -1135,6 +1166,78 @@ MonoBehaviour:
   topType: 1
   mAtlas: {fileID: 11429880, guid: 7ac19e631d87666429cf891f4974afae, type: 2}
   mSpriteName: money
+  mFillCenter: 1
+--- !u!114 &11423654
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c20815eb3063c24290a61b7020a1836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thumb: {fileID: 0}
+  mBG: {fileID: 11423656}
+  mFG: {fileID: 11423656}
+  mValue: 1
+  mFill: 0
+  numberOfSteps: 0
+  onChange: []
+  foreground: {fileID: 0}
+  rawValue: 1
+  direction: 2
+  mInverted: 0
+--- !u!114 &11423656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  rightAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  bottomAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  topAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  updateAnchors: 1
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 4
+  mWidth: 136
+  mHeight: 22
+  mDepth: 0
+  autoResizeBoxCollider: 1
+  hideIfOffScreen: 0
+  keepAspectRatio: 0
+  aspectRatio: 6.18181801
+  mType: 1
+  mFillDirection: 4
+  mFillAmount: 1
+  mInvert: 0
+  mFlip: 0
+  centerType: 1
+  leftType: 1
+  rightType: 1
+  bottomType: 1
+  topType: 1
+  mAtlas: {fileID: 11429880, guid: 7ac19e631d87666429cf891f4974afae, type: 2}
+  mSpriteName: bar_patience
   mFillCenter: 1
 --- !u!1001 &100100000
 Prefab:

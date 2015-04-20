@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public enum HeatType{
     Any,
-    Low, 
+    Low = 0, 
     Medium,
     High,
     VeryHigh,
@@ -28,6 +28,7 @@ public class Client{
     // settings
     float patiencePerResource = 0.8f;
     int rewardPerResource = 2;
+    int rewardPerHeatLevel = 10;
 
 // todo heat type
     public Client(string _avatar, string _item, HeatType type = HeatType.Any)
@@ -37,6 +38,8 @@ public class Client{
         avatar = _avatar;
         item = _item;
         heatType = type;
+
+        reward += (int)heatType * rewardPerHeatLevel;
     }
 
     public void addRequirenment(Requirenment _req){
@@ -62,6 +65,8 @@ public class ClientController : MonoBehaviour {
 
     public UILabel moneyRewardLabel;
     public UILabel statusLabel;
+
+    public UIProgressBar forgingBar;
 
     Client client;
     ClientSpace currentSpace;
