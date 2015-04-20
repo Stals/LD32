@@ -91,6 +91,8 @@ public class ClientController : MonoBehaviour {
         client1.addRequirenment(new Requirenment(ResourceType.Metal, 3));
 
         create(client1);*/
+
+        giveButton.isEnabled = false;
 	}
 	
     public void create(Client _client, ClientSpace space){
@@ -154,12 +156,27 @@ public class ClientController : MonoBehaviour {
             return;
         }
 
-        giveButton.isEnabled = isEnough();
+
+        if (isEnough())
+        {
+            statusLabel.text = "Forging...";
+            updateForging();
+        }
+
+        if (forgingBar.value >= 1) {
+            statusLabel.text = "Give";
+            giveButton.isEnabled = true;
+        }
 
 
         updatePatience();
 
 	}
+
+    void updateForging()
+    {
+        forgingBar.value += 0.1f * Time.deltaTime;
+    }
 
     void updatePatience()
     {
