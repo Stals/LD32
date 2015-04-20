@@ -190,7 +190,7 @@ public class ClientController : MonoBehaviour {
             updatePatience();
         }
 
-        if (isEnough() && forgingBar.value >= 1)
+        if (enoughResources() && forgingBar.value >= 1)
         {
             statusLabel.text = "Give";
             giveButton.isEnabled = true;
@@ -237,6 +237,21 @@ public class ClientController : MonoBehaviour {
         requirenmentsGrid.Reposition();
     }
 
+    bool enoughResources()
+    {
+        foreach (Requirenment req in client.requirenments)
+        {
+            int amount = Game.Instance.playerResourcesManager.getAmountByType(req.type);
+            if (amount < req.amount)
+            {
+                
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     // TODO probably will need to redo
     bool isEnough(){
 
@@ -259,14 +274,10 @@ public class ClientController : MonoBehaviour {
             Game.Instance.forgeController.setClickHintVisible(false);
         }
 
-        foreach (Requirenment req in client.requirenments)
-        {
-            int amount = Game.Instance.playerResourcesManager.getAmountByType(req.type);
-            if(amount < req.amount){
-                statusLabel.text = "Needs Mat.";
-                return false;
-            }
+        if (!enoughResources()) {
+            statusLabel.text = "Needs Mat.";
         }
+
 
         return enough;
     }
