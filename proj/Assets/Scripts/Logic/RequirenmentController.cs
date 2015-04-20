@@ -51,7 +51,7 @@ public class RequirenmentController : MonoBehaviour {
         int current = Game.Instance.playerResourcesManager.getAmountByType(requirenment.type);
         current = Mathf.Min(current, requirenment.amount);
 
-        amountLabel.text = current.ToString() + " / " + requirenment.amount.ToString();
+        amountLabel.text = current.ToString() + "  /  " + requirenment.amount.ToString();
 
         if (current >= requirenment.amount)
         {
