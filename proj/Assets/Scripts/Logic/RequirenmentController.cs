@@ -2,7 +2,7 @@
 using System.Collections;
 
 public enum ResourceType{
-    Metal,
+    Metal = 0,
     Gold,
     Magic,
     Wood,

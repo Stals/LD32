@@ -48,6 +48,8 @@ public class PlayerResourcesManager : MonoBehaviour {
         setNewAmount(currentMax);
 
         upgradePrice += upgradePrice;
+
+        audio.Play();
         
     }
 
