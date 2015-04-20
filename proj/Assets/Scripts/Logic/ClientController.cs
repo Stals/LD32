@@ -230,7 +230,9 @@ public class ClientController : MonoBehaviour {
     {
         isActivated = false;
         patienceInProgress = false;
-         
+
+
+        giveButton.isEnabled = false;
 
         // TODO animation + destory after time
         float animationTime = 1f;
@@ -243,9 +245,13 @@ public class ClientController : MonoBehaviour {
         
         gameObject.MoveTo(path, animationTime, 0, EaseType.easeInSine);*/
 
+
+
         gameObject.MoveBy(new Vector3(0f, 1f, 0f), animationTime, 0, EaseType.easeInOutSine);
         
         Destroy(gameObject, animationTime);
+
+
         
         //NGUITools.Destroy(this.gameObject, );
     }
