@@ -12,6 +12,14 @@ public class PlayerResourcesManager : MonoBehaviour {
     [SerializeField]
     int currentMax = 10;
 
+    [SerializeField]
+    UILabel upgradePriceLabel;
+
+    [SerializeField]
+    UIButton upgradeButton;
+
+    int upgradePrice = 50;
+
     void Awake()
     {
         Game.Instance.playerResourcesManager = this;
@@ -24,14 +32,21 @@ public class PlayerResourcesManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+        upgradePriceLabel.text = upgradePrice.ToString();
+
+       
+        upgradeButton.isEnabled = (Game.Instance.playerStuffManager.money >= upgradePrice);
+         
 	}
 
     public void upgradeMax()
     {
+        Game.Instance.playerStuffManager.money -= upgradePrice;
+
         //amountPerUpgrade
         currentMax += amountPerUpgrade;
         setNewAmount(currentMax);
+        
     }
 
     void setNewAmount(int nAmount)
