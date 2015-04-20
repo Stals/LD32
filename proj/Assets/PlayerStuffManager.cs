@@ -19,7 +19,7 @@ public class PlayerStuffManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        moneyLabel.text = "x " + money.ToString();
-        healthLabel.text = "x " + health.ToString();
+        moneyLabel.text = " " + money.ToString();
+        healthLabel.text = " " + health.ToString();
 	}
 }
