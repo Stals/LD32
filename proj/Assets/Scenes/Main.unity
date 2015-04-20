@@ -6140,7 +6140,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 880998141}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 384.600006, y: 329, z: 0}
+  m_LocalPosition: {x: 400, y: 340, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1596178738}
@@ -6221,7 +6221,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 40
   mHeight: 40
-  mDepth: 4
+  mDepth: 11
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
