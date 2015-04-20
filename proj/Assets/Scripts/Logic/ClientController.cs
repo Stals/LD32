@@ -77,6 +77,8 @@ public class ClientController : MonoBehaviour {
     [SerializeField]
     GameObject selectHeat;
 
+
+
 	// Use this for initialization
 	void Start () {
         /*Client client1 = new Client("knight", "sword");
@@ -112,6 +114,9 @@ public class ClientController : MonoBehaviour {
         // TODO heat
 
         moneyRewardLabel.text = client.reward.ToString();
+
+
+        gameObject.MoveBy(-new Vector3(0f, 0.75f, 0f), 1f, 0, EaseType.easeInOutSine);
     }
 
     string getHeatName(HeatType type){
@@ -237,8 +242,8 @@ public class ClientController : MonoBehaviour {
 
         
         gameObject.MoveTo(path, animationTime, 0, EaseType.easeInSine);*/
-        
-        gameObject.MoveBy(new Vector3(0f, 0.75f, 0f), animationTime, 0, EaseType.easeInOutSine );
+
+        gameObject.MoveBy(new Vector3(0f, 1f, 0f), animationTime, 0, EaseType.easeInOutSine);
         
         Destroy(gameObject, animationTime);
         
