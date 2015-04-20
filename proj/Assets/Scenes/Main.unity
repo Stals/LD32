@@ -6874,7 +6874,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 40, y: 40, z: 0}
+  m_Size: {x: 32, y: 32, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &880998144
 MonoBehaviour:
@@ -6937,8 +6937,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 40
-  mHeight: 40
+  mWidth: 32
+  mHeight: 32
   mDepth: 11
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
@@ -6955,7 +6955,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11429880, guid: 7ac19e631d87666429cf891f4974afae, type: 2}
-  mSpriteName: hint
+  mSpriteName: help
   mFillCenter: 1
 --- !u!1 &881018459
 GameObject:

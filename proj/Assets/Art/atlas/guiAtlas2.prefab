@@ -133,58 +133,6 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_blue_square
-    x: 979
-    y: 842
-    width: 32
-    height: 32
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: element_blue_square_glossy
-    x: 836
-    y: 753
-    width: 32
-    height: 32
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: element_green_rectangle
-    x: 717
-    y: 700
-    width: 64
-    height: 32
-    borderLeft: 10
-    borderRight: 10
-    borderTop: 10
-    borderBottom: 10
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: element_green_square
-    x: 836
-    y: 720
-    width: 32
-    height: 32
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: element_green_square_glossy
     x: 836
     y: 687
     width: 32
@@ -197,9 +145,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: element_grey_rectangle
-    x: 652
-    y: 700
+  - name: element_blue_square_glossy
+    x: 877
+    y: 742
+    width: 32
+    height: 32
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: element_green_rectangle
+    x: 717
+    y: 733
     width: 64
     height: 32
     borderLeft: 10
@@ -210,9 +171,9 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: element_grey_square
-    x: 963
-    y: 698
+  - name: element_green_square
+    x: 877
+    y: 709
     width: 32
     height: 32
     borderLeft: 0
@@ -223,9 +184,9 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: element_grey_square_glossy
-    x: 963
-    y: 731
+  - name: element_green_square_glossy
+    x: 836
+    y: 720
     width: 32
     height: 32
     borderLeft: 0
@@ -236,20 +197,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: element_purple_cube_glossy
-    x: 930
-    y: 698
-    width: 32
-    height: 32
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: element_purple_rectangle
+  - name: element_grey_rectangle
     x: 812
     y: 786
     width: 64
@@ -262,9 +210,61 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: element_purple_square
+  - name: element_grey_square
+    x: 930
+    y: 764
+    width: 32
+    height: 32
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: element_grey_square_glossy
+    x: 963
+    y: 764
+    width: 32
+    height: 32
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: element_purple_cube_glossy
     x: 930
     y: 731
+    width: 32
+    height: 32
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: element_purple_rectangle
+    x: 717
+    y: 700
+    width: 64
+    height: 32
+    borderLeft: 10
+    borderRight: 10
+    borderTop: 10
+    borderBottom: 10
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: element_purple_square
+    x: 930
+    y: 698
     width: 32
     height: 32
     borderLeft: 0
@@ -290,7 +290,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: element_red_square
     x: 963
-    y: 764
+    y: 731
     width: 32
     height: 32
     borderLeft: 0
@@ -302,8 +302,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_red_square_glossy
-    x: 930
-    y: 764
+    x: 963
+    y: 698
     width: 32
     height: 32
     borderLeft: 0
@@ -315,8 +315,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_yellow_rectangle
-    x: 717
-    y: 733
+    x: 652
+    y: 700
     width: 64
     height: 32
     borderLeft: 10
@@ -328,8 +328,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_yellow_square
-    x: 877
-    y: 709
+    x: 979
+    y: 842
     width: 32
     height: 32
     borderLeft: 0
@@ -341,8 +341,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_yellow_square_glossy
-    x: 877
-    y: 742
+    x: 836
+    y: 753
     width: 32
     height: 32
     borderLeft: 0
@@ -405,6 +405,19 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: help
+    x: 0
+    y: 16
+    width: 32
+    height: 31
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: hint
     x: 587
     y: 701
@@ -419,7 +432,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: leather
-    x: 0
+    x: 33
     y: 16
     width: 32
     height: 31
@@ -458,7 +471,7 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 2
   - name: money
-    x: 33
+    x: 66
     y: 17
     width: 30
     height: 30
@@ -484,7 +497,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: particleCartoonStar
-    x: 442
+    x: 453
     y: 689
     width: 10
     height: 10
@@ -497,7 +510,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: particleSmallStar
-    x: 453
+    x: 442
     y: 689
     width: 10
     height: 10
@@ -602,7 +615,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: tutor1
     x: 0
-    y: 48
+    y: 261
     width: 341
     height: 212
     borderLeft: 0
@@ -628,7 +641,7 @@ MonoBehaviour:
     paddingBottom: 62
   - name: tutor3
     x: 0
-    y: 261
+    y: 48
     width: 341
     height: 212
     borderLeft: 0
@@ -679,7 +692,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: wood
-    x: 64
+    x: 97
     y: 18
     width: 30
     height: 29
