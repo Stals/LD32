@@ -34,6 +34,9 @@ public class ClientSpawner : MonoBehaviour {
 
     List<Day> days;
 
+    [SerializeField]
+    UILabel dayLabel;
+
     int currentDay = 0;
 
 	// Use this for initialization
@@ -171,7 +174,7 @@ public class ClientSpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+        dayLabel.text = "Day " + (currentDay + 1).ToString();
 	}
 
     void spawn()
