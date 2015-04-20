@@ -61,6 +61,7 @@ public class ClientController : MonoBehaviour {
     public UIButton giveButton;
 
     public UILabel moneyRewardLabel;
+    public UILabel statusLabel;
 
     Client client;
     ClientSpace currentSpace;
