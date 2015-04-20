@@ -190,9 +190,13 @@ public class ClientController : MonoBehaviour {
             updatePatience();
         }
 
-        if (forgingBar.value >= 1) {
+        if (isEnough() && forgingBar.value >= 1)
+        {
             statusLabel.text = "Give";
             giveButton.isEnabled = true;
+        }
+        else {
+            giveButton.isEnabled = false;
         }
 
 	}
@@ -258,10 +262,6 @@ public class ClientController : MonoBehaviour {
                 statusLabel.text = "Needs Mat.";
                 return false;
             }
-        }
-
-        if (enough) {
-            statusLabel.text = "Give";
         }
 
         return enough;
