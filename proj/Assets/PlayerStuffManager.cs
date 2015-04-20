@@ -15,6 +15,7 @@ public class PlayerStuffManager : MonoBehaviour {
     void Awake()
     {
         Game.Instance.playerStuffManager = this;
+        health = 5;
     }
 
 	// Use this for initialization
