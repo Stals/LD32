@@ -46,6 +46,8 @@ public class PlayerResourcesManager : MonoBehaviour {
         //amountPerUpgrade
         currentMax += amountPerUpgrade;
         setNewAmount(currentMax);
+
+        upgradePrice += upgradePrice;
         
     }
 
