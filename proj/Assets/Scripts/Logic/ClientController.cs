@@ -22,13 +22,13 @@ public class Client{
     public string item;
     public HeatType heatType;
     public List<Requirenment> requirenments;
-    public float patience = 9f; // strating minimum patience
-    public int reward = 10; //starting min
+    public float patience = 15f; // strating minimum patience
+    public int reward = 5; //starting min
 
     // settings
-    float patiencePerResource = 1.5f;
+    float patiencePerResource = 3f;
     int rewardPerResource = 2;
-    int rewardPerHeatLevel = 10;
+    int rewardPerHeatLevel = 2;
 
 // todo heat type
     public Client(string _avatar, string _item, HeatType type = HeatType.Any)
