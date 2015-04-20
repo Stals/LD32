@@ -18,6 +18,11 @@ public class PlayerResourcesManager : MonoBehaviour {
     [SerializeField]
     UIButton upgradeButton;
 
+    [SerializeField]
+    UIButton winButton;
+
+    int amountToWin = 50;
+
     int upgradePrice = 50;
 
     void Awake()
@@ -36,8 +41,22 @@ public class PlayerResourcesManager : MonoBehaviour {
 
        
         upgradeButton.isEnabled = (Game.Instance.playerStuffManager.money >= upgradePrice);
-         
+
+        winButton.gameObject.SetActive(isWin());         
 	}
+
+    bool isWin()
+    {
+        var resources = GetComponentsInChildren<ResourceManager>();
+        foreach (ResourceManager r in resources)
+        {
+            if (r.getAmount() < amountToWin) {
+                
+                return false;
+            }
+        }
+        return true;
+    }
 
     public void upgradeMax()
     {
