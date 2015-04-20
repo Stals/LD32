@@ -23,9 +23,11 @@ public class Client{
     public HeatType heatType;
     public List<Requirenment> requirenments;
     public float patience = 7f; // strating minimum patience
+    public int reward = 10; //starting min
 
     // settings
     float patiencePerResource = 0.8f;
+    int rewardPerResource = 2;
 
 // todo heat type
     public Client(string _avatar, string _item, HeatType type = HeatType.Any)
@@ -41,6 +43,7 @@ public class Client{
         requirenments.Add(_req);
 
         patience += _req.amount * patiencePerResource;
+        reward += _req.amount * rewardPerResource;
     }
 }
 
@@ -106,6 +109,8 @@ public class ClientController : MonoBehaviour {
         Invoke("startPatienceReduction", patienceTimerDelay);
 
         // TODO heat
+
+        moneyRewardLabel.text = client.reward.ToString();
     }
 
     string getHeatName(HeatType type){
@@ -197,6 +202,8 @@ public class ClientController : MonoBehaviour {
 
     public void onGiveButtonClick()
     {
+        Game.Instance.playerStuffManager.money += client.reward;
+
         foreach (Requirenment req in client.requirenments)
         {
             Game.Instance.playerResourcesManager.reduceAmountByType(req.type, req.amount);

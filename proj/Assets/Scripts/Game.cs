@@ -27,6 +27,7 @@ public class Game  {
     ErrorHandler _errorHandler;
     public PlayerResourcesManager playerResourcesManager;
     public ForgeController forgeController;
+    public PlayerStuffManager playerStuffManager;
 
 	Player player;
 

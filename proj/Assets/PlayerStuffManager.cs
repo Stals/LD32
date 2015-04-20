@@ -3,14 +3,19 @@ using System.Collections;
 
 public class PlayerStuffManager : MonoBehaviour {
 
-    int money = 0;
-    int health = 5;
+    public int money{ get; set;}
+    public int health{ get; set;}
 
     [SerializeField]
     UILabel moneyLabel;
 
     [SerializeField]
     UILabel healthLabel;
+
+    void Awake()
+    {
+        Game.Instance.playerStuffManager = this;
+    }
 
 	// Use this for initialization
 	void Start () {
