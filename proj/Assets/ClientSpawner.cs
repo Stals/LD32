@@ -133,11 +133,32 @@ public class ClientSpawner : MonoBehaviour {
             }
         }
         // =======================
-
         // TODO день для расслабления
 
 
         // ВАЖНО для последнего дня задать day.clientsPerDay = -1;
+        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        // ========== LAST DAY START =============
+        // ========== LAST DAY START =============
+        // ========== LAST DAY START =============
+        // ========== LAST DAY START =============
+        // ========== LAST DAY START =============
+        // ========== LAST DAY START =============
+        // ========== LAST DAY START =============
+        // обязательный medium типок
+        {
+            Day day = new Day();
+            days.Add(day);
+
+            day.clientsPerDay = -1;
+            {
+                Client client = new Client(getHeroName(), "", HeatType.Medium);
+                client.addRequirenment(new Requirenment(ResourceType.Gold, Random.Range(2, 3)));
+                day.Add(client);
+            }
+
+        }
+        // =======================
 
         InvokeRepeating("spawn", 2f, 9f);
     }
@@ -163,6 +184,7 @@ public class ClientSpawner : MonoBehaviour {
                 if (!getCurrentDay().isClientsRemaining()) {
                     currentDay += 1;
                 }
+                getCurrentDay().clientsPerDay -= 1;
 
 
                 GameObject go = NGUITools.AddChild(space.gameObject, clientPanelPrefab);
