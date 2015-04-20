@@ -155,7 +155,7 @@ public class ClientController : MonoBehaviour {
             case HeatType.High:
                 return "high";
             case HeatType.VeryHigh:
-                return "veryhight";
+                return "veryhigh";
             case HeatType.Medium:
                 return "medium";
             case HeatType.Low:
