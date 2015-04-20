@@ -15,13 +15,13 @@ public class ClientSpawner : MonoBehaviour {
         clients = new List<Client>();
 
         {
-            Client client = new Client(getHeroName(), "i_sword_01", HeatType.High);
+            Client client = new Client(getHeroName(), "", HeatType.High);
             client.addRequirenment(new Requirenment(ResourceType.Wood, 2));
             client.addRequirenment(new Requirenment(ResourceType.Metal, 3));
             clients.Add(client);
         }
         {
-            Client client = new Client(getHeroName(), "i_sword_01", HeatType.Low);
+            Client client = new Client(getHeroName(), "", HeatType.Low);
             client.addRequirenment(new Requirenment(ResourceType.Wood, Random.Range(1, 4)));
             client.addRequirenment(new Requirenment(ResourceType.Magic, 3));
             clients.Add(client);

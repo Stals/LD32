@@ -111,11 +111,29 @@ public class ClientController : MonoBehaviour {
             addRequirenment(req);
         }
        
+
         Sprite t1 = Resources.Load <Sprite> ("clients/" + client.avatar);
         avatar.sprite2D = t1;
 
-        Sprite t2 = Resources.Load <Sprite> ("items/" + client.item);
-        itemIcon.sprite2D = t2;
+
+
+        if (client.item.Length == 0)
+        {
+            Sprite[] textures = Resources.LoadAll<Sprite>("items");
+            Sprite texture = textures[Random.Range(0, textures.Length)];
+            itemIcon.sprite2D = texture;
+            //go.GetComponent<Renderer>().material.mainTexture = texture;
+        }
+        else {
+            Sprite t2 = Resources.Load<Sprite>("items/" + client.item);
+            itemIcon.sprite2D = t2;
+        }
+        /*
+         Object[] textures = Resources.LoadAll("Textures");
+        Texture2D texture = textures[Random.Range(0, textures.Length)];
+        go.GetComponent<Renderer>().material.mainTexture = texture;
+         */
+
 
         Sprite t3 = Resources.Load <Sprite> ("heat/" + getHeatName(client.heatType));
         heatIcon.sprite2D = t3;
