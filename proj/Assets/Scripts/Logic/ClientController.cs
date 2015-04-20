@@ -82,6 +82,11 @@ public class ClientController : MonoBehaviour {
     [SerializeField]
     GameObject selectHeat;
 
+    [SerializeField]
+    AudioSource finishSuccess;
+
+    [SerializeField]
+    AudioSource finishFail;
 
 
 	// Use this for initialization
@@ -190,6 +195,7 @@ public class ClientController : MonoBehaviour {
             
             if (patienceLeft <= 0)
             {
+                finishFail.Play();
                 // once
                 removeSelf();
             }
@@ -246,6 +252,8 @@ public class ClientController : MonoBehaviour {
         {
             Game.Instance.playerResourcesManager.reduceAmountByType(req.type, req.amount);
         }
+
+        finishSuccess.Play();
 
         removeSelf();
     }
