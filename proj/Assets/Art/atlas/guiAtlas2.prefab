@@ -108,7 +108,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: element_blue_rectangle
     x: 59
-    y: 176
+    y: 77
     width: 64
     height: 32
     borderLeft: 10
@@ -121,7 +121,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: element_blue_square
     x: 124
-    y: 44
+    y: 274
     width: 32
     height: 32
     borderLeft: 0
@@ -133,8 +133,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_blue_square_glossy
-    x: 167
-    y: 61
+    x: 124
+    y: 209
     width: 32
     height: 32
     borderLeft: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: element_green_rectangle
     x: 59
-    y: 77
+    y: 176
     width: 64
     height: 32
     borderLeft: 10
@@ -159,123 +159,6 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_green_square
-    x: 167
-    y: 28
-    width: 32
-    height: 32
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: element_green_square_glossy
-    x: 200
-    y: 61
-    width: 32
-    height: 32
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: element_grey_rectangle
-    x: 59
-    y: 110
-    width: 64
-    height: 32
-    borderLeft: 10
-    borderRight: 10
-    borderTop: 10
-    borderBottom: 10
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: element_grey_square
-    x: 233
-    y: 61
-    width: 32
-    height: 32
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: element_grey_square_glossy
-    x: 200
-    y: 28
-    width: 32
-    height: 32
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: element_purple_cube_glossy
-    x: 124
-    y: 274
-    width: 32
-    height: 32
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: element_purple_rectangle
-    x: 59
-    y: 143
-    width: 64
-    height: 32
-    borderLeft: 10
-    borderRight: 10
-    borderTop: 10
-    borderBottom: 10
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: element_purple_square
-    x: 124
-    y: 209
-    width: 32
-    height: 32
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: element_red_rectangle
-    x: 59
-    y: 44
-    width: 64
-    height: 32
-    borderLeft: 10
-    borderRight: 10
-    borderTop: 10
-    borderBottom: 10
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: element_red_square
     x: 124
     y: 176
     width: 32
@@ -288,7 +171,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: element_red_square_glossy
+  - name: element_green_square_glossy
     x: 124
     y: 143
     width: 32
@@ -301,9 +184,9 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: element_yellow_rectangle
+  - name: element_grey_rectangle
     x: 59
-    y: 209
+    y: 44
     width: 64
     height: 32
     borderLeft: 10
@@ -314,7 +197,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: element_yellow_square
+  - name: element_grey_square
     x: 124
     y: 110
     width: 32
@@ -327,9 +210,126 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: element_yellow_square_glossy
+  - name: element_grey_square_glossy
     x: 124
     y: 77
+    width: 32
+    height: 32
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: element_purple_cube_glossy
+    x: 124
+    y: 44
+    width: 32
+    height: 32
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: element_purple_rectangle
+    x: 59
+    y: 209
+    width: 64
+    height: 32
+    borderLeft: 10
+    borderRight: 10
+    borderTop: 10
+    borderBottom: 10
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: element_purple_square
+    x: 167
+    y: 61
+    width: 32
+    height: 32
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: element_red_rectangle
+    x: 59
+    y: 143
+    width: 64
+    height: 32
+    borderLeft: 10
+    borderRight: 10
+    borderTop: 10
+    borderBottom: 10
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: element_red_square
+    x: 200
+    y: 28
+    width: 32
+    height: 32
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: element_red_square_glossy
+    x: 233
+    y: 61
+    width: 32
+    height: 32
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: element_yellow_rectangle
+    x: 59
+    y: 110
+    width: 64
+    height: 32
+    borderLeft: 10
+    borderRight: 10
+    borderTop: 10
+    borderBottom: 10
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: element_yellow_square
+    x: 167
+    y: 28
+    width: 32
+    height: 32
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: element_yellow_square_glossy
+    x: 200
+    y: 61
     width: 32
     height: 32
     borderLeft: 0
@@ -484,8 +484,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: particleCartoonStar
-    x: 153
-    y: 11
+    x: 215
+    y: 118
     width: 10
     height: 10
     borderLeft: 0
@@ -497,8 +497,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: particleSmallStar
-    x: 215
-    y: 118
+    x: 153
+    y: 11
     width: 10
     height: 10
     borderLeft: 0
