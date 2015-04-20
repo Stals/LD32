@@ -162,14 +162,15 @@ public class ClientController : MonoBehaviour {
             statusLabel.text = "Forging...";
             updateForging();
         }
+        else {
+            // only if ! forging
+            updatePatience();
+        }
 
         if (forgingBar.value >= 1) {
             statusLabel.text = "Give";
             giveButton.isEnabled = true;
         }
-
-
-        updatePatience();
 
 	}
 
