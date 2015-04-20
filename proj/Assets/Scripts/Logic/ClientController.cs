@@ -180,12 +180,15 @@ public class ClientController : MonoBehaviour {
     // TODO probably will need to redo
     bool isEnough(){
 
+        bool enough = true;
+
 //        Debug.Log(Game.Instance.forgeController.getCurrentHeat());
         //if ((client.heatType != HeatType.Any) &&
            if ((Game.Instance.forgeController.getCurrentHeat() != client.heatType))
         {
+            statusLabel.text = "Needs Heat";
             selectHeat.SetActive(false);
-            return false;
+            enough =  false;
         } else
         {
             selectHeat.SetActive(true);
@@ -195,10 +198,16 @@ public class ClientController : MonoBehaviour {
         {
             int amount = Game.Instance.playerResourcesManager.getAmountByType(req.type);
             if(amount < req.amount){
+                statusLabel.text = "Needs Mat.";
                 return false;
             }
         }
-        return true;
+
+        if (enough) {
+            statusLabel.text = "Give";
+        }
+
+        return enough;
     }
 
     public void onGiveButtonClick()
