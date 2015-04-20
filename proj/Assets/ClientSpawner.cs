@@ -15,7 +15,7 @@ public class ClientSpawner : MonoBehaviour {
         clients = new List<Client>();
 
         {
-            Client client = new Client(getHeroName(), "", HeatType.High);
+            Client client = new Client(getHeroName(), "", HeatType.Medium);
             client.addRequirenment(new Requirenment(ResourceType.Wood, 2));
             client.addRequirenment(new Requirenment(ResourceType.Metal, 3));
             clients.Add(client);
