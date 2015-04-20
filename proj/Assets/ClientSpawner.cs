@@ -48,13 +48,13 @@ public class ClientSpawner : MonoBehaviour {
 
             day.clientsPerDay = 3;
             {
-                Client client = new Client(getHeroName(), "", HeatType.Medium);
+                Client client = new Client(getHeroName(), "", HeatType.Low);
                 client.addRequirenment(new Requirenment(ResourceType.Wood, Random.Range(1, 3)));
                 day.Add(client);
             }
 
             {
-                Client client = new Client(getHeroName(), "", HeatType.Medium);
+                Client client = new Client(getHeroName(), "", HeatType.Low);
                 client.addRequirenment(new Requirenment(ResourceType.Metal, Random.Range(1, 3)));
                 day.Add(client);
             }
@@ -133,6 +133,7 @@ public class ClientSpawner : MonoBehaviour {
             }
         }
         // =======================
+
         // TODO день для расслабления
 
 
