@@ -70,7 +70,7 @@ public class ForgeController : MonoBehaviour {
 	}
 
     public void setClickHintVisible(bool visible) {
-        clickHintLabel.gameObject.SetActive(visible);
+        //clickHintLabel.gameObject.SetActive(visible);
     }
 
     public void updateSelect()
