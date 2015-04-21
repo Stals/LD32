@@ -5670,7 +5670,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 406
   mHeight: 338
-  mDepth: 5
+  mDepth: 4
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0

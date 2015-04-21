@@ -22,11 +22,11 @@ public class Client{
     public string item;
     public HeatType heatType;
     public List<Requirenment> requirenments;
-    public float patience = 13f; // strating minimum patience
+    public float patience = 11f; // strating minimum patience
     public int reward = 5; //starting min
 
     // settings
-    float patiencePerResource = 3f;
+    float patiencePerResource = 1.5f;
     int rewardPerResource = 2;
     int rewardPerHeatLevel = 2;
 
