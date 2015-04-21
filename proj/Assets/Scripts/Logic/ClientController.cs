@@ -22,7 +22,7 @@ public class Client{
     public string item;
     public HeatType heatType;
     public List<Requirenment> requirenments;
-    public float patience = 15f; // strating minimum patience
+    public float patience = 13f; // strating minimum patience
     public int reward = 5; //starting min
 
     // settings
@@ -276,6 +276,7 @@ public class ClientController : MonoBehaviour {
 
         if (!enoughResources()) {
             statusLabel.text = "Needs Mat.";
+            return false;
         }
 
 
