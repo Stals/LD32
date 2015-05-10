@@ -572,7 +572,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 136, y: 22, z: 0}
+  m_Size: {x: 136, y: 21, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &8299266
 AudioSource:
@@ -783,12 +783,12 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 136
-  mHeight: 22
+  mHeight: 21
   mDepth: 0
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 6.18181801
+  aspectRatio: 6.47619057
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -855,12 +855,12 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 136
-  mHeight: 22
+  mHeight: 21
   mDepth: 4
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 6.18181801
+  aspectRatio: 6.47619057
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -1525,12 +1525,12 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 136
-  mHeight: 22
+  mHeight: 21
   mDepth: 0
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 6.18181801
+  aspectRatio: 6.47619057
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
