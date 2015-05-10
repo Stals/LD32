@@ -88,6 +88,9 @@ public class ClientController : MonoBehaviour {
     [SerializeField]
     AudioSource finishFail;
 
+    [SerializeField]
+    ClientOverPanelController clientOverPanelController;
+
 
 	// Use this for initialization
 	void Start () {
@@ -223,7 +226,7 @@ public class ClientController : MonoBehaviour {
                     Game.Instance.playerStuffManager.health = 0;
                 }
                 // once
-                removeSelf();
+                removeSelf(false);
             }
         }
     }
@@ -293,14 +296,16 @@ public class ClientController : MonoBehaviour {
 
         finishSuccess.Play();
 
-        removeSelf();
+        removeSelf(true);
     }
-    void removeSelf()
+    void removeSelf(bool success)
     {
         isActivated = false;
         patienceInProgress = false;
         giveButton.isEnabled = false;
         statusLabel.alpha = 0f;
+
+        clientOverPanelController.show(success);
 
 
         // TODO animation + destory after time
