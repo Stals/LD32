@@ -103,6 +103,8 @@ public class Block : MonoBehaviour {
     public void setSelected(bool _selected){
         if (!_selected && selected)
         {
+            particleSystem.Stop();
+
             iTween.Stop(gameObject);
             gameObject.RotateTo(new Vector3(0, 0, 0), 0.2f, 0);
             //transform.localEulerAngles = new Vector3(0, 0, 4.5f);
@@ -112,6 +114,8 @@ public class Block : MonoBehaviour {
 
         if (_selected)
         {
+            particleSystem.Play();
+
             //audio.pitch = Random.Range(0.9f, 1.1f);
             audio.Play();
 			gameObject.ScaleTo(new Vector3(0.75f, 0.75f), 0.2f, 0);
@@ -174,5 +178,7 @@ public class Block : MonoBehaviour {
 
 		Destroy (this.gameObject);
         //TODO finish sound
+        // TODO allow for the particles To fade
+
 	}
 }
