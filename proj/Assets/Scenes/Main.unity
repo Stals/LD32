@@ -5553,7 +5553,7 @@ GameObject:
   - 114: {fileID: 880998144}
   - 65: {fileID: 880998143}
   m_Layer: 5
-  m_Name: Control - Simple Button
+  m_Name: HintButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
