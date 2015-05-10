@@ -220,6 +220,7 @@ public class ClientController : MonoBehaviour {
             
             if (patienceLeft <= 0)
             {
+                Game.Instance.getGameManager().Shake(0.1f, 0.005f);
                 finishFail.Play();
                 Game.Instance.playerStuffManager.health -= 1;
                 if (Game.Instance.playerStuffManager.health < 0) {

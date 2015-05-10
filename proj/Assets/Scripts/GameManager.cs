@@ -12,14 +12,15 @@ public class GameManager : MonoBehaviour {
 
     Player player;
 
-    int currentBet = 0;
-    int linesLeft = 9;
+
+    [SerializeField]
+    CameraShake cameraShake;
+
 
 	// Use this for initialization
 	void Start () {
         Game.Instance.setGameManager(this);
         player = Game.Instance.getPlayer();
-
 	}
 
 	// Update is called once per frame
@@ -34,5 +35,9 @@ public class GameManager : MonoBehaviour {
     public bool canRemoveLine()
     {
 		return true;
+    }
+
+    public void Shake(float intent, float decay) {
+        cameraShake.Shake(intent, decay);
     }
 }
