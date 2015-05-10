@@ -101,6 +101,7 @@ public class Block : MonoBehaviour {
     }
 
     public void setSelected(bool _selected){
+        updatePosition(); // so that shakes dont add up
         if (!_selected && selected)
         {
             particleSystem.Stop();

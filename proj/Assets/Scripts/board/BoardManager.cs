@@ -36,16 +36,18 @@ public class BoardManager : MonoBehaviour {
     [SerializeField]
     Texture2D capTex;
 
-
-
     VectorLine line = null;
     Vector3[] lineVector;
+    List<VectorLine> selectionCircles = new List<VectorLine>();
+
 
     float boardWidth;
     float boardHeight;
 
     public bool createNewBoard = false;
     
+
+
     // Use this for initialization
 	void Start () {
         VectorLine.SetEndCap("rounded", EndCap.Mirror, lineMaterial, capTex);
@@ -181,22 +183,45 @@ public class BoardManager : MonoBehaviour {
 
         int pointsCount = selectedBlocks.Count;
         if (pointsCount < 2)
+        {
+            if (pointsCount == 1) {
+                addSelectionCirle(selectedBlocks[0].transform.position);
+            }
+
             return;
+        }
 
         Vector3[] points = new Vector3[selectedBlocks.Count];
-        for(int i = 0; i < pointsCount; ++i){
+        for (int i = 0; i < pointsCount; ++i)
+        {
             Vector3 pos = selectedBlocks[i].transform.position;
             pos.z = -5;
             points[i] = pos;
 
-            //line = new VectorLine("LineRenderer" // points, lineMaterial, 7.0f, Vectrosity.LineType.Continuous, Joins.Weld);
-            //line.Draw3D();
+            addSelectionCirle(pos);
 
-            //VectorLine.MakeCircle(pos, 15f);
         }
-        line = new VectorLine("LineRenderer", points, lineMaterial, 7.0f, Vectrosity.LineType.Continuous, Joins.Weld);
+        line = new VectorLine("LineRenderer", points, lineMaterial, 5.0f, Vectrosity.LineType.Continuous, Joins.Weld);
         line.endCap = "rounded";
         line.Draw3D();
+    }
+
+    void addSelectionCirle(Vector3 position)
+    {
+        int segments = 6;
+        // Make Vector2 array where the size is the number of segments plus one (since the first and last points must be the same)
+        var linePoints = new Vector3[segments + 1];
+
+        // Make a VectorLine object using the above points and a material as defined in the inspector, with a width of 3 pixels
+        var l = new VectorLine("Dots", linePoints, lineMaterial, 6.0f, Vectrosity.LineType.Continuous, Joins.Weld);
+        // Create an ellipse in the VectorLine object, where the origin is the center of the screen
+        // If xRadius and yRadius are the same, you can use MakeCircleInLine instead, which needs just one radius value instead of two
+        l.MakeCircle(position, 0.015f);// MakeEllipse(Vector2(Screen.width / 2, Screen.height / 2), xRadius, yRadius, segments, pointRotation);
+
+        // Draw the line
+        l.Draw3D();
+
+        selectionCircles.Add(l);
     }
 
     void clearDisplayedLine()
@@ -206,6 +231,11 @@ public class BoardManager : MonoBehaviour {
             Destroy(line.vectorObject);
             line = null;
         }
+
+        foreach(VectorLine l in selectionCircles){
+            Destroy(l.vectorObject); 
+        }
+        selectionCircles.Clear();
     }
 
 	void updateBlocksPosition()
