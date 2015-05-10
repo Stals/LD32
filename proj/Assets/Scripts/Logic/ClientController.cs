@@ -279,7 +279,6 @@ public class ClientController : MonoBehaviour {
             return false;
         }
 
-
         return enough;
     }
 
@@ -300,30 +299,15 @@ public class ClientController : MonoBehaviour {
     {
         isActivated = false;
         patienceInProgress = false;
-
-
         giveButton.isEnabled = false;
+        statusLabel.alpha = 0f;
+
 
         // TODO animation + destory after time
         float animationTime = 1f;
-        
-        /*Vector3 finish = gameObject.transform.position;
-        finish.y -= 100;
-
-        Vector3[] path = new Vector3[2] {gameObject.transform.position, finish};
-
-        
-        gameObject.MoveTo(path, animationTime, 0, EaseType.easeInSine);*/
-
-
-
         gameObject.MoveBy(new Vector3(0f, 1f, 0f), animationTime, 0, EaseType.easeInOutSine);
         
         Destroy(gameObject, animationTime);
-
-
-        
-        //NGUITools.Destroy(this.gameObject, );
     }
 
     void OnDestroy() {
