@@ -25,7 +25,7 @@ public class ClientOverPanelController : MonoBehaviour {
 	}
 
     public void show(bool success) {
-        tweener.active = true;
+        tweener.gameObject.SetActive(true);
         tweener.PlayForward();
 
         BackgroundObject.SetActive(true);
