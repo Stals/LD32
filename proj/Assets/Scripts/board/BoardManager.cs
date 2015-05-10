@@ -29,8 +29,14 @@ public class BoardManager : MonoBehaviour {
 
 	Board currentBoard;
 
+
     [SerializeField]
     Material lineMaterial;
+
+    [SerializeField]
+    Texture2D capTex;
+
+
 
     VectorLine line = null;
     Vector3[] lineVector;
@@ -42,6 +48,8 @@ public class BoardManager : MonoBehaviour {
     
     // Use this for initialization
 	void Start () {
+        VectorLine.SetEndCap("rounded", EndCap.Mirror, lineMaterial, capTex);
+
         Vector3 size = exampleObject.GetComponentInChildren<SpriteRenderer> ().bounds.size;
 		objectWidth = size.x;
 		objectHeight = size.y;
@@ -180,9 +188,14 @@ public class BoardManager : MonoBehaviour {
             Vector3 pos = selectedBlocks[i].transform.position;
             pos.z = -5;
             points[i] = pos;
-        }
 
+            //line = new VectorLine("LineRenderer" // points, lineMaterial, 7.0f, Vectrosity.LineType.Continuous, Joins.Weld);
+            //line.Draw3D();
+
+            //VectorLine.MakeCircle(pos, 15f);
+        }
         line = new VectorLine("LineRenderer", points, lineMaterial, 7.0f, Vectrosity.LineType.Continuous, Joins.Weld);
+        line.endCap = "rounded";
         line.Draw3D();
     }
 
