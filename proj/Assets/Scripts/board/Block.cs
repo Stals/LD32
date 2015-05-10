@@ -181,4 +181,9 @@ public class Block : MonoBehaviour {
         // TODO allow for the particles To fade
 
 	}
+
+    public void shake()
+    {
+        gameObject.ShakePosition(new Vector3(0.025f, 0f), 0.4f, 0.1f);
+    }
 }

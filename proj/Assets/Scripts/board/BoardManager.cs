@@ -161,6 +161,7 @@ public class BoardManager : MonoBehaviour {
         foreach (Block block in selectedBlocks)
         {
             block.setSelected(false);
+            block.shake();
         }
         selectedBlocks.Clear();
         clearDisplayedLine();
