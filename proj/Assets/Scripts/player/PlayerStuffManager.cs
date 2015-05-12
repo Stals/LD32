@@ -15,10 +15,17 @@ public class PlayerStuffManager : MonoBehaviour {
         {
             hp = value;
 
-        if (Game.Instance.getGameManager() != null)
-        {
-            Game.Instance.getGameManager().playHit();
-        }
+            // max durty hack!
+            if (hp != 15)
+            {
+                spawnDropingHeart();
+            }
+
+
+            /*if (Game.Instance.getGameManager() != null)
+            {
+                Game.Instance.getGameManager().playHit();
+            }*/
     } }
 
 
@@ -30,6 +37,32 @@ public class PlayerStuffManager : MonoBehaviour {
 
     [SerializeField]
     public GameObject moneyIcon;
+
+    [SerializeField]
+    GameObject heartIcon;
+
+    [SerializeField]
+    GameObject dropingHeartObject;
+
+
+    void spawnDropingHeart()
+    {
+        Camera gameCamera = NGUITools.FindCameraForLayer(gameObject.layer);
+        Camera uiCamera = UICamera.mainCamera;
+
+
+        GameObject guiObject = NGUITools.AddChild(gameObject, dropingHeartObject);
+
+        /* UILabel label = guiObject.GetComponentInChildren<UILabel>();
+         label.text = amout.ToString();*/
+
+        /* MOVE TO CORRECT POSITION*/
+        // Get screen location of node
+        Vector2 screenPos = Camera.main.WorldToScreenPoint(heartIcon.transform.position);
+
+        // Move to node
+        guiObject.transform.position = uiCamera.ScreenToWorldPoint(screenPos);
+    }
 
     void Awake()
     {
