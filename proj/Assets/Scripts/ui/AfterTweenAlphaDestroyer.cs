@@ -8,8 +8,8 @@ public class AfterTweenAlphaDestroyer : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        var tweenAlpha = GetComponent<TweenAlpha>();
+       // var tweenAlpha = GetComponent<TweenAlpha>();
 
-        Destroy(gameObject, tweenAlpha.duration + tweenAlpha.delay);
+       // Destroy(gameObject, tweenAlpha.duration + tweenAlpha.delay);
     }
 }

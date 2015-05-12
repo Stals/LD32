@@ -4,7 +4,23 @@ using System.Collections;
 public class PlayerStuffManager : MonoBehaviour {
 
     public int money{ get; set;}
-    public int health{ get; set;}
+
+    int hp;
+    public int health
+    {
+        get {
+            return hp;
+        }
+        set
+        {
+            hp = value;
+
+        if (Game.Instance.getGameManager() != null)
+        {
+            Game.Instance.getGameManager().playHit();
+        }
+    } }
+
 
     [SerializeField]
     UILabel moneyLabel;

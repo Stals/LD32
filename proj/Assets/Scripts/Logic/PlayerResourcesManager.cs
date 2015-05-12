@@ -21,6 +21,9 @@ public class PlayerResourcesManager : MonoBehaviour {
     [SerializeField]
     UIButton winButton;
 
+    [SerializeField]
+    GameObject glowButton;
+
     int amountToWin = 50;
 
     int upgradePrice = 50;
@@ -39,8 +42,11 @@ public class PlayerResourcesManager : MonoBehaviour {
 	void Update () {
         upgradePriceLabel.text = upgradePrice.ToString();
 
+
+        bool enoughMoney =  (Game.Instance.playerStuffManager.money >= upgradePrice);
        
         upgradeButton.isEnabled = (Game.Instance.playerStuffManager.money >= upgradePrice);
+        glowButton.SetActive(enoughMoney);
 
         winButton.gameObject.SetActive(isWin());         
 	}

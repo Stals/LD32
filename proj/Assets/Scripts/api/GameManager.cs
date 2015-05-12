@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     CameraShake cameraShake;
 
+    [SerializeField]
+    GameObject hitAnimationObject;
+
 
 	// Use this for initialization
 	void Start () {
@@ -39,5 +42,10 @@ public class GameManager : MonoBehaviour {
 
     public void Shake(float intent, float decay) {
         cameraShake.Shake(intent, decay);
+    }
+
+    public void playHit()
+    {
+        hitAnimationObject.GetComponent<Animator>().Play("hit");
     }
 }
