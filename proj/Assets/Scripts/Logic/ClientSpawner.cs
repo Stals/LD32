@@ -348,8 +348,8 @@ public class ClientSpawner : MonoBehaviour {
 
             {
                 Client client = new Client(getHeroName(), "", HeatType.High);
-                client.addRequirenment(new Requirenment(ResourceType.Magic, Random.Range(11, 14)));
-                client.addRequirenment(new Requirenment(ResourceType.Gold, Random.Range(11, 14)));
+                client.addRequirenment(new Requirenment(ResourceType.Magic, Random.Range(9, 12)));
+                client.addRequirenment(new Requirenment(ResourceType.Gold, Random.Range(9, 12)));
                 day.Add(client);
             }
         }
@@ -378,7 +378,7 @@ public class ClientSpawner : MonoBehaviour {
 
             {
                 Client client = new Client(getHeroName(), "", HeatType.High);
-                client.addRequirenment(new Requirenment(ResourceType.Gold, Random.Range(2, 3)));
+                client.addRequirenment(new Requirenment(ResourceType.Wood, Random.Range(2, 3)));
                 client.addRequirenment(new Requirenment(ResourceType.Metal, Random.Range(2, 3)));
                 day.Add(client);
             }
