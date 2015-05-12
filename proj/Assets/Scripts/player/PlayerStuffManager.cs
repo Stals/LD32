@@ -12,6 +12,9 @@ public class PlayerStuffManager : MonoBehaviour {
     [SerializeField]
     UILabel healthLabel;
 
+    [SerializeField]
+    public GameObject moneyIcon;
+
     void Awake()
     {
         Game.Instance.playerStuffManager = this;

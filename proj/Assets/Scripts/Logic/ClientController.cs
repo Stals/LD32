@@ -91,6 +91,9 @@ public class ClientController : MonoBehaviour {
     [SerializeField]
     ClientOverPanelController clientOverPanelController;
 
+    [SerializeField]
+    GameObject floatingCoinPrefab;
+
 
 	// Use this for initialization
 	void Start () {
@@ -291,10 +294,35 @@ public class ClientController : MonoBehaviour {
         return enough;
     }
 
-    public void onGiveButtonClick()
+    void giveReward()
     {
         Game.Instance.playerStuffManager.money += client.reward;
 
+
+        int coinsToSpawn = (client.reward / 5);
+        GameObject uiTarget = Game.Instance.playerStuffManager.moneyIcon;
+        for (int i = 0; i < coinsToSpawn; ++i)
+        {
+            // vizualize
+            float time = Random.Range(0.6f, 0.8f);
+            float delay = (0.02f * i);
+
+            GameObject guiObject = BezierHelper.moveTo(avatar.gameObject, uiTarget, floatingCoinPrefab, time, delay);
+            Destroy(guiObject, time + delay);
+
+            // play sound only once
+            if (i == 0) {
+                uiTarget.GetComponent<PlayerCoinsController>().Invoke("OnFinishAnimation", time + delay);
+            }
+        }
+
+        
+    }
+
+    public void onGiveButtonClick()
+    {
+        giveReward();
+        
         foreach (Requirenment req in client.requirenments)
         {
             Game.Instance.playerResourcesManager.reduceAmountByType(req.type, req.amount);
