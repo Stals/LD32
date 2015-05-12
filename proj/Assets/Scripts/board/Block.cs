@@ -117,7 +117,7 @@ public class Block : MonoBehaviour {
         {
             particleSystem.Play();
 
-            //audio.pitch = Random.Range(0.9f, 1.1f);
+            audio.pitch = Random.Range(0.92f, 0.97f) + (Game.Instance.getBoardManager().getSelectedCount() * 0.045f); 
             audio.Play();
 			gameObject.ScaleTo(new Vector3(0.75f, 0.75f), 0.2f, 0);
         }

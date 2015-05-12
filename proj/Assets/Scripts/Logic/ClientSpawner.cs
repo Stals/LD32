@@ -556,6 +556,7 @@ public class ClientSpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         dayLabel.text = "Day " + (currentDay + 1).ToString();
+        //getCurrentDay().isClientsRemaining()
 	}
 
     void spawn()
