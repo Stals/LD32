@@ -26,9 +26,9 @@ public class Client{
     public int reward = 5; //starting min
 
     // settings
-    float patiencePerResource = 1.5f;
+    float patiencePerResource = 1.7f;
     int rewardPerResource = 2;
-    int rewardPerHeatLevel = 2;
+    int rewardPerHeatLevel = 3;
 
 // todo heat type
     public Client(string _avatar, string _item, HeatType type = HeatType.Any)
