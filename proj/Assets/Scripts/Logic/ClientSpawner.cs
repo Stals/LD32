@@ -44,7 +44,7 @@ public class ClientSpawner : MonoBehaviour {
     {
         days = new List<Day>();
 
-        // ========== DAY START =============
+        // ========== DAY START 1=============
         {
             Day day = new Day();
             days.Add(day);
@@ -84,7 +84,7 @@ public class ClientSpawner : MonoBehaviour {
         }
         // =======================
 
-        // ========== DAY START =============
+        // ========== DAY START 2=============
         {
             Day day = new Day();
             days.Add(day);
@@ -160,7 +160,7 @@ public class ClientSpawner : MonoBehaviour {
         // =======================
 
 
-        // ========== DAY START =============
+        // ========== DAY START 3=============
         {
             Day day = new Day();
             days.Add(day);
@@ -207,7 +207,7 @@ public class ClientSpawner : MonoBehaviour {
 
             {
                 Client client = new Client(getHeroName(), "", HeatType.Medium);
-                client.addRequirenment(new Requirenment(ResourceType.Gem, Random.Range(10, 13)));
+                client.addRequirenment(new Requirenment(ResourceType.Magic, Random.Range(7, 11)));
                 day.Add(client);
             }
 
@@ -237,7 +237,7 @@ public class ClientSpawner : MonoBehaviour {
         //}
         // =======================
 
-        // ========== DAY START =============
+        // ========== DAY START 4=============
         {
             Day day = new Day();
             days.Add(day);
@@ -280,7 +280,7 @@ public class ClientSpawner : MonoBehaviour {
             }
         }
         // =======================
-        // ========== DAY START =============
+        // ========== DAY START 5=============
         {
             Day day = new Day();
             days.Add(day);
@@ -296,7 +296,7 @@ public class ClientSpawner : MonoBehaviour {
 
             {
                 Client client = new Client(getHeroName(), "", HeatType.High);
-                client.addRequirenment(new Requirenment(ResourceType.Magic, Random.Range(5, 8)));
+                client.addRequirenment(new Requirenment(ResourceType.Metal, Random.Range(5, 8)));
                 client.addRequirenment(new Requirenment(ResourceType.Gem, Random.Range(3, 7)));
                 day.Add(client);
             }
@@ -341,21 +341,21 @@ public class ClientSpawner : MonoBehaviour {
             {
                 Client client = new Client(getHeroName(), "", HeatType.Low);
                 client.addRequirenment(new Requirenment(ResourceType.Gem, Random.Range(5, 8)));
-                client.addRequirenment(new Requirenment(ResourceType.Gold, Random.Range(3, 7)));
+                client.addRequirenment(new Requirenment(ResourceType.Metal, Random.Range(3, 7)));
                 client.addRequirenment(new Requirenment(ResourceType.Wood, Random.Range(4, 6)));
                 day.Add(client);
             }
 
             {
                 Client client = new Client(getHeroName(), "", HeatType.High);
-                client.addRequirenment(new Requirenment(ResourceType.Gem, Random.Range(11, 14)));
+                client.addRequirenment(new Requirenment(ResourceType.Magic, Random.Range(11, 14)));
                 client.addRequirenment(new Requirenment(ResourceType.Gold, Random.Range(11, 14)));
                 day.Add(client);
             }
         }
         // =======================
 
-        // ========== DAY START =============
+        // ========== DAY START 6=============
         {
             Day day = new Day();
             days.Add(day);
@@ -365,7 +365,7 @@ public class ClientSpawner : MonoBehaviour {
                 Client client = new Client(getHeroName(), "", HeatType.Low);
                 client.addRequirenment(new Requirenment(ResourceType.Wood, Random.Range(5, 9)));
                 client.addRequirenment(new Requirenment(ResourceType.Gold, Random.Range(3, 6)));
-                client.addRequirenment(new Requirenment(ResourceType.Gem, Random.Range(3, 8)));
+                client.addRequirenment(new Requirenment(ResourceType.Metal, Random.Range(3, 8)));
                 day.Add(client);
             }
 
@@ -429,7 +429,7 @@ public class ClientSpawner : MonoBehaviour {
 
             {
                 Client client = new Client(getHeroName(), "", HeatType.High);
-                client.addRequirenment(new Requirenment(ResourceType.Gem, Random.Range(11, 14)));
+                client.addRequirenment(new Requirenment(ResourceType.Metal, Random.Range(11, 14)));
                 client.addRequirenment(new Requirenment(ResourceType.Gold, Random.Range(11, 14)));
                 day.Add(client);
             }
@@ -437,7 +437,7 @@ public class ClientSpawner : MonoBehaviour {
             {
                 Client client = new Client(getHeroName(), "", HeatType.Low);
                 client.addRequirenment(new Requirenment(ResourceType.Wood, Random.Range(10, 11)));
-                client.addRequirenment(new Requirenment(ResourceType.Gold, Random.Range(10, 11)));
+                client.addRequirenment(new Requirenment(ResourceType.Metal, Random.Range(10, 11)));
                 client.addRequirenment(new Requirenment(ResourceType.Gem, Random.Range(10, 11)));
                 day.Add(client);
             }
@@ -466,7 +466,7 @@ public class ClientSpawner : MonoBehaviour {
         // ========== LAST DAY START =============
         // обязательный medium типок
 
-        // ========== DAY START =============
+        // ========== DAY START 7=============
         {
             Day day = new Day();
             days.Add(day);
@@ -476,7 +476,7 @@ public class ClientSpawner : MonoBehaviour {
                 Client client = new Client(getHeroName(), "", HeatType.Low);
                 client.addRequirenment(new Requirenment(ResourceType.Wood, Random.Range(5, 9)));
                 client.addRequirenment(new Requirenment(ResourceType.Gold, Random.Range(3, 6)));
-                client.addRequirenment(new Requirenment(ResourceType.Gem, Random.Range(3, 8)));
+                client.addRequirenment(new Requirenment(ResourceType.Metal, Random.Range(3, 8)));
                 day.Add(client);
             }
 
@@ -526,7 +526,7 @@ public class ClientSpawner : MonoBehaviour {
 
             {
                 Client client = new Client(getHeroName(), "", HeatType.Low);
-                client.addRequirenment(new Requirenment(ResourceType.Gem, Random.Range(5, 8)));
+                client.addRequirenment(new Requirenment(ResourceType.Metal, Random.Range(5, 8)));
                 client.addRequirenment(new Requirenment(ResourceType.Gold, Random.Range(3, 7)));
                 client.addRequirenment(new Requirenment(ResourceType.Wood, Random.Range(4, 6)));
                 day.Add(client);
@@ -534,8 +534,8 @@ public class ClientSpawner : MonoBehaviour {
 
             {
                 Client client = new Client(getHeroName(), "", HeatType.High);
-                client.addRequirenment(new Requirenment(ResourceType.Gem, Random.Range(11, 14)));
-                client.addRequirenment(new Requirenment(ResourceType.Gold, Random.Range(11, 14)));
+                client.addRequirenment(new Requirenment(ResourceType.Gem, Random.Range(9, 12)));
+                client.addRequirenment(new Requirenment(ResourceType.Metal, Random.Range(11, 14)));
                 day.Add(client);
             }
 
