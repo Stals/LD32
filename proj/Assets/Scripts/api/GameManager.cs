@@ -46,6 +46,6 @@ public class GameManager : MonoBehaviour {
 
     public void playHit()
     {
-        hitAnimationObject.GetComponent<Animator>().Play("hit");
+        hitAnimationObject.GetComponent<Animator>().Play(Animator.StringToHash("hit"));
     }
 }
