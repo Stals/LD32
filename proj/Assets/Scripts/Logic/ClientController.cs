@@ -183,15 +183,20 @@ public class ClientController : MonoBehaviour {
         }
 
 
-        if (isEnough() && forgingBar.value < 1)
-        {
-            statusLabel.text = "Forging...";
-            updateForging();
+        if (isEnough()) {
+            if (forgingBar.value < 1) {
+                statusLabel.text = "Forging...";
+                updateForging();
+            }
+            else  {
+                updatePatience(0.5f); // if we just need to give - lower the rate at witch patience is going down
+            }
         }
         else {
             // only if ! forging
             updatePatience();
         }
+
 
         if (enoughResources() && forgingBar.value >= 1)
         {
@@ -209,12 +214,12 @@ public class ClientController : MonoBehaviour {
         forgingBar.value += 0.2f * Time.deltaTime;
     }
 
-    void updatePatience()
+    void updatePatience(float factor = 1f)
     {
         if (patienceInProgress)
         {
             // update patience
-            patienceLeft -= Time.deltaTime;
+            patienceLeft -= (Time.deltaTime * factor);
             patienceBar.value = (patienceLeft / client.patience);
             
             
