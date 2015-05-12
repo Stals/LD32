@@ -132,7 +132,7 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 228
+  mWidth: 212
   mHeight: 60
   mDepth: 4
   autoResizeBoxCollider: 0
@@ -748,7 +748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &125939381
 Transform:
   m_ObjectHideFlags: 0
@@ -801,7 +801,7 @@ MonoBehaviour:
   alwaysOnScreen: 0
   anchorOffset: 0
   renderQueue: 0
-  startingRenderQueue: 3016
+  startingRenderQueue: 3017
   mAlpha: 1
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
@@ -2915,7 +2915,7 @@ MonoBehaviour:
   alwaysOnScreen: 0
   anchorOffset: 0
   renderQueue: 0
-  startingRenderQueue: 3018
+  startingRenderQueue: 3019
   mAlpha: 1
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
@@ -3770,7 +3770,7 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 20
+  mWidth: 22
   mHeight: 26
   mDepth: 14
   autoResizeBoxCollider: 0
@@ -4354,7 +4354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &818656511
 Animator:
   serializedVersion: 3
@@ -7325,7 +7325,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 125964, guid: d41f8b3046b675f4083251d7de68be5c, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d41f8b3046b675f4083251d7de68be5c, type: 2}
@@ -15449,7 +15449,7 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 176
+  mWidth: 172
   mHeight: 120
   mDepth: 3
   autoResizeBoxCollider: 0
